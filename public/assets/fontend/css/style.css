@@ -1,0 +1,1178 @@
+/*
+
+Template Name:  autos24 - HTML Template
+Author: themeszoon
+Version: 1.00
+
+Table of Content
+----------------
+
+
+
+*/
+
+/* start basic css */
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap');
+*{
+	margin:0;
+	padding:0;
+}
+.container-fluid {
+    padding-right: 34px;
+    padding-left: 34px;
+}
+ul,ol{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+p{
+	margin-top:0;
+	margin-bottom:0;
+}
+h1,h2,h3,h4,h5,h6{
+	margin-top:0;
+	margin-bottom:0;
+}
+button:focus{
+	cursor:pointer;
+    outline:0;
+    box-shadow: none;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+/* end  basic css */
+
+/* start header one */
+
+.scroll_top:hover{
+	color:#fff;
+	background:#000;
+	transition:all .5s;
+}
+.mvw{
+	position:fixed;
+	width:100%;
+	top:0px;
+	z-index:9999;
+	transition:all .5s;
+	background:#000;
+	box-shadow: 0px 0px 10px 0px#ddd
+}
+.scroll_top{
+	position:fixed;
+	height:40px;
+	width:40px;
+	text-align:center;
+	line-height:40px;
+	background: #000;
+	border-radius:5px;
+	z-index:9999;
+	bottom:30px;
+	right:30px;
+	font-size:16px;
+	display:none;
+	cursor:pointer;
+	color:#fff;
+	transition:all .5s;
+}
+.icon_bar .fa {
+    color: #FF7519;
+    font-size: 24px;
+    line-height: 33px;
+    border-radius: 5px;
+    border: 1px solid #FF7519;
+    height: 35px;
+    width: 43px;
+    background: transparent;
+    text-align: center;
+}
+.Scroll_scroll{
+    width: 100%;
+    transition: all .5s;
+	box-shadow: 0 0 10px 1px #000;
+	background:#000;
+}
+
+/* start header one */
+.header_one_area{
+	background:#EDEDED;
+	color:#000;
+}
+.top_contct{
+	color:#fff;
+}
+.top_contact ul li{
+	
+}
+.drop_positon{
+	position: relative;
+}
+.dropdown_drop {
+	position: absolute;
+	top:0;
+	left:0;
+}
+.custom_nav_select ul li {
+    padding:10px;
+    font-size:16px;
+}
+.custom_nav_select ul li .dropdown-menu{
+    border:none;
+    padding:0px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px#ddd;
+    border-radius: none;
+}
+.custom_nav_select ul li .dropdown-menu a{
+    padding:10px;
+}
+.custom_nav_select ul li .dropdown-menu a:hover{
+    background: #090909;
+    color:#fff;
+}
+.top_contact ul li a{
+	color:#000;
+	display: inline-block;
+}
+.top_nav ul li a {
+    text-decoration: none;
+	color: #000;
+	font-size: 17px;
+	font-weight: 600;
+}
+.top_nav ul li{
+	margin:0px 5px;
+}
+select.top_single_select:not([size]):not([multiple]) {
+	height: 36px;
+	outline:0;
+	border:1px solid#ddd;
+	box-shadow:none;
+}
+.padding_contact {
+    margin-bottom: -7px;
+    padding-top: 10px;
+}
+.navbar-expand .navbar-nav .dropdown-menu .dropdown-item {
+    font-size: 15px !important;
+    text-transform: capitalize;
+	font-weight: 400;
+	padding:10px;
+}
+.navbar-expand .navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 43px;
+    padding: 0px;
+    background: #fff;
+    border-radius: 0px 0px 0px 0px;
+	border: none;
+}
+.dropdown-divider {
+	margin:0px;
+}
+
+/* start header one */
+/* start header area */
+.header_area{
+	background:#FFFFFF;
+}
+.logo img {
+    height: 46px;
+    width: 200px;
+}
+.nav-pills .nav-link.active, .nav-pills .nav-link {
+    background-color: transparent;
+    color: #000;
+}
+#mynav{
+	font-family: 'Raleway', sans-serif;
+	color:#fff;
+}
+#mynav ul li a {
+    color: #090909;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.top_single a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+}
+.top_single_select:focus{
+	outline:0;
+	box-shadow: none;
+	border:none;
+	border-radius:0px 0px 0px 0px;
+	width: 173px;
+	background: transparent;
+	border:1px solid#000;
+	color:#000;
+}
+.login_register a{
+	color:#000;
+	text-decoration: none;
+}
+.full_slide{
+	position: relative;
+}
+.main_search{
+	position: absolute;
+	top:30px;
+	z-index: 999;
+	left:20px;
+}
+.new_tabpen {
+    background: rgba(255,255,255,.9);
+    padding: 20px;
+	border-radius: 10px;
+	font-family: 'Raleway', sans-serif;
+}
+.custion_option label{
+	font-weight:600;
+	text-transform:capitalize;
+}
+.custion_option label {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+.custion_option option{
+	font-weight: 500;
+	text-transform:capitalize;
+}
+.custion_option select{
+	font-weight: 500;
+	text-transform:capitalize;
+	font-size: 15px;
+}
+.form-control{
+	outline:0;
+	border:1px solid#ddd;
+	box-shadow:none;
+}
+.form-control:focus{
+	outline:0;
+	border:1px solid#ddd;
+	box-shadow:none;
+}
+.login_register a {
+    color: #000;
+    text-decoration: none;
+}
+.login {
+    background: #000;
+    color: #fff !important;
+    text-transform: capitalize;
+    font-size: 13px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 73px;
+    text-align: center;
+    border-radius: 5px;
+}
+.login_register .fa{
+	color:#000;
+	text-decoration: none;
+	margin:0px 5px;
+}
+.top_single_select {
+    outline: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0px 0px 0px 0px;
+    font-size: 12px;
+    text-transform: uppercase;
+	background: transparent;
+	width: 173px;
+	border:1px solid#000;
+	color:#000;
+}
+.custom_padding_nav{
+    padding-top:15px;
+}
+
+/* start header area */
+
+/* start slider area */
+
+
+.top_car_image ul li{
+    display: inline-block;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    padding: 5px;
+    margin: 0px -3px;
+    margin-top: 0px;
+    margin-top: 20px;
+}
+.top_car_image ul li a {
+    padding: 14px;
+    margin: 0px -3px;
+    margin-top: 0px;
+    margin-top: 0px;
+    margin-top: 20px;
+}
+.new_custom{
+	text-align: center;
+}
+.form-check-input {
+    margin-left:0px;
+}
+.border1{
+	border-right:1px solid #000;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: transparent;
+    border-color: transparent;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+    color: #495057;
+    background-color: #ddd;
+    border-color: transparent;
+}
+.nav-tabs .nav-link {
+    width: 246px;
+    text-align: center;
+}
+.form-check {
+    position: relative;
+    display: block;
+    margin-bottom: .5rem;
+    text-align: left;
+    margin-bottom: 19px;
+}
+.search_btn{
+    color: #fff;
+	padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+.search_btn a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block;
+    width: 100%;
+    background: #C10803;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 10px;
+	border-radius: 37px 0px 37px 0px;
+	transition:all .5s;
+}
+.search_btn a:hover{
+    color: #fff;
+	background: #FF6600;
+	border-radius: 0px 37px 0px 37px;
+}
+/* end slider area */
+
+/* vip seller start */
+.vipseller_area{
+	padding:50px 0px 50px 0px;
+}
+.custom_border{
+	border-top:10px solid #FF7519;
+}
+.custom_borders{
+	border-top:10px solid rgb(43, 43, 145);
+}
+.custom_border2{
+	border-top:10px solid #C10803;
+}
+.custom_border3{
+	border-top:10px solid #FF7519;
+}
+.custom_seller h4{
+	text-transform: capitalize;
+    font-size: 13px;
+    font-weight: bold;
+    color: #FF7519;
+	margin-bottom: 12px;
+}
+
+.top_seller{
+	padding:20px 0px 30px 0px;
+}
+.top_seller h4 {
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #fff;
+    background: #FF7519;
+    padding: 7px;
+    width: 134px;
+    text-align: center;
+	border-radius: 30px 0px 30px 0px;
+	transition:all .5s;
+	cursor:pointer;
+}
+.top_seller h4:hover{
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #fff;
+    background: #FF7519;
+    padding: 7px;
+    width: 134px;
+    text-align: center;
+    border-radius: 0px 30px 0px 30px;
+}
+.custom_red h4 {
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #fff;
+    background: #C10803;
+    padding: 7px;
+	width: 134px;
+    text-align: center;
+	border-radius: 30px 0px 30px 0px;
+	transition:all .5s;
+	cursor:pointer;
+}
+.custom_red h4:hover{
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #fff;
+    background: #C10803;
+    padding: 7px;
+    width: 134px;
+    text-align: center;
+    border-radius: 0px 30px 0px 30px;
+}
+.top_seller h5 {
+    font-size: 19px;
+    text-transform: capitalize;
+	font-weight: 500;
+	border-bottom:1px solid#ddd;
+	padding-bottom:10px;
+}
+.full_single_car{
+	box-shadow: 0px 0px 10px 0px #ddd;
+	margin-top:20px;
+	margin-bottom:20px;
+	position: relative;
+}
+.top_position_top {
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+.top_position_top h4 {
+    background: #FF7519;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    font-weight: 800;
+}
+.top_position_vip {
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+.top_position_vip h4 {
+    background: #C10803;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    font-weight: 800;
+}
+.top_position_ordinary {
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+.top_position_ordinary h4 {
+    background:#2B2B91;
+    color: #fff;
+    height: 80px;
+    line-height: 80px;
+    width: 80px;
+    border-radius: 100%;
+	font-weight: 800;
+	font-size:17px;
+}
+.single_car_text h2{
+	padding-bottom: 10px;
+	text-transform: capitalize;
+    font-size: 21px;
+    margin-top: 20px;
+    margin-bottom: 11px;
+	position: relative;
+	margin-bottom:20px;
+}
+.single_car_text h2::after {
+    top: 36px;
+    left: 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: #000;
+    height: 1px;
+    width: 102px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+.single_car_text p{
+	font-weight: 800;
+}
+.single_car_text h2 a{
+	text-decoration: none;
+	color:#000;
+}
+.single_car_text:hover h2 a{
+	text-decoration: none;
+	color:#FF7519;
+}
+.single_car_text{
+	padding-bottom:20px;
+}
+.nxtbtn,
+.prevbtn {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    z-index:1;
+    transform: translatey(-50%);
+    cursor: pointer;
+	color: #FF6600;
+	text-align: center;
+	font-size: 15px;
+	background: #fff;
+	border-radius: 100%;
+}
+.nxtbtn {
+    right:0;
+	transform: scale();
+}
+.prevbtn {
+	left:0;
+	transform: scale();
+}
+.nxtbtn7,
+.prevbtn7 {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    z-index:1;
+    transform: translatey(-50%);
+    cursor: pointer;
+	color: #2B2B91;
+	text-align: center;
+	font-size: 15px;
+	background: #fff;
+	border-radius: 100%;
+}
+.nxtbtn7 {
+    right:0;
+	transform: scale();
+}
+.prevbtn7 {
+	left:0;
+	transform: scale();
+}
+.nxtbtn6,
+.prevbtn6 {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    z-index:1;
+    transform: translatey(-50%);
+    cursor: pointer;
+	color: #2B2B91;
+	text-align: center;
+	font-size: 15px;
+	background: #fff;
+	border-radius: 100%;
+}
+.nxtbtn6 {
+    right:0;
+	transform: scale();
+}
+.prevbtn6 {
+	left:0;
+	transform: scale();
+}
+.nxtbtn5,
+.prevbtn5 {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    z-index:1;
+    transform: translatey(-50%);
+    cursor: pointer;
+	color: #2B2B91;
+	text-align: center;
+	font-size: 15px;
+	background: #fff;
+	border-radius: 100%;
+}
+.nxtbtn5 {
+    right:0;
+	transform: scale();
+}
+.prevbtn5 {
+	left:0;
+	transform: scale();
+}
+.nxtbtn1,
+.prevbtn1 {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    z-index:1;
+    transform: translatey(-50%);
+    cursor: pointer;
+	color: #C10803;
+	text-align: center;
+	font-size: 15px;
+	background: #fff;
+	border-radius: 100%;
+}
+.nxtbtn1 {
+    right:0;
+	transform: scale();
+}
+.prevbtn1 {
+	left:0;
+	transform: scale();
+}
+.nxtbtn2,
+.prevbtn2 {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    z-index:1;
+    transform: translatey(-50%);
+    cursor: pointer;
+	color: #2B2B91;
+	text-align: center;
+	font-size: 15px;
+	background: #fff;
+	border-radius: 100%;
+}
+.nxtbtn2 {
+    right:0;
+	transform: scale();
+}
+.prevbtn2 {
+	left:0;
+	transform: scale();
+}
+.nxtbtn3,
+.prevbtn3 {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    z-index:1;
+    transform: translatey(50%);
+    cursor: pointer;
+	color: #FF6600;
+	text-align: center;
+	font-size: 15px;
+	background: #fff;
+	border-radius: 100%;
+	box-shadow:0px 0px 10px 0px #ddd;
+}
+.nxtbtn3 {
+    right:0;
+	transform: scale();
+}
+.prevbtn3 {
+	left:0;
+	transform: scale();
+}
+.nxtbtn4,
+.prevbtn4 {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    z-index:1;
+    transform: translatey(-50%);
+    cursor: pointer;
+	color: #FF6600;
+	text-align: center;
+	font-size: 15px;
+	background: #fff;
+	border-radius: 100%;
+}
+.nxtbtn4 {
+    right:0;
+	transform: scale();
+}
+.prevbtn4 {
+	left:0;
+	transform: scale();
+}
+/* vip seller end */
+
+/* start partner area */
+.our_partner_area{
+	padding:50px 0px 50px 0px;
+}
+.partner_slider img{
+	width:100%;
+}
+.partner_slider img{
+	margin-top:10px;
+	margin-bottom:10px;
+	transition:all .5s;
+}
+.partner_slider img:hover{
+	transform:scale(1.1);
+}
+.{}
+.{}
+/* end partner area */
+
+/* start blog area */
+.our_blog_area{
+	padding:50px 0px 50px 0px;
+}
+.single_blog img{
+	width:100%;
+}
+.single_blog{
+	box-shadow: 0px 0px 10px 0px#ddd;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.blog_text {
+    padding: 11px 10px 18px 17px;
+}
+.blog_text h2 {
+    font-size: 23px;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+.blog_text p{
+	font-size: 15px;
+	line-height:25px;
+}
+.blog_text a{
+	text-decoration: none;
+	color:#FF6600;
+}
+/* end blog area */
+
+/* start footer top area */
+.footer_top_area{
+	background:#EDEDED;
+	color:#000;
+	margin-top:50px;
+}
+.footer_top{}
+.single_footer_list h4{
+	text-transform:uppercase;
+	font-size: 20px;
+	margin-bottom:10px;
+	padding-bottom: 5px;
+}
+.single_footer_list ul li a{
+	text-decoration: none;
+	color:#000;
+}
+.single_footer_list ul li {
+	padding:7px;
+}
+
+/* start footer top area */
+
+/* start footer area */
+.footer_area{
+	background:#EDEDED;
+}
+.all_icon .fa{
+	color:#000;
+	padding:8px;
+}
+.single_footer_left p{
+	text-align: center;
+	color:#000;
+	padding:10px 0px 10px 0px;
+}
+.single_footer img {
+    width: 93%;
+    height: 50px;
+}
+/* end footer area */
+
+/* start style for contact us */
+
+/* start contact us top  */
+.contact_us_top_area{
+    padding:70px 0px 70px 0px;
+    background: url(../img/slide-7.jpg)no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+.contact_us_top{}
+.contact_top_text h2{
+    color:#fff;
+    font-weight: 600;
+    text-transform:capitalize;
+}
+.contact_top_text p{
+    color:#fff;
+    font-weight: 500;
+    text-transform:capitalize;
+    font-size: 14px;
+    margin-top:20px;
+}
+.{}
+.{}
+/* end contact us top  */
+.{}
+/* start box type contact us */
+.contact_top_box_area{
+    padding:80px 0px 80px 0px;
+}
+.single_boxtype {
+    border: 1px solid #FF7519;
+    padding: 20px 20px 30px 20px;
+}
+.boxtype_icon .fa {
+    color: #FF7519;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.boxtype_textx h2 {
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.boxtype_textx p{
+    font-size:15px;
+    line-height:25px;
+}
+.right_contact1{
+    background:#EDEDED;
+}
+.right_contact1 h2 {
+    background: #EDEDED;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color: #FF7519;
+}
+.left_contact1{
+    background:#EDEDED;
+}
+.{}
+.{}
+.{}
+/* end box type contact us */
+.{}
+.{}
+/* start contact */
+.contact_area1{}
+.right_contact1 {
+    padding: 20px;
+    text-align: center;
+}
+.left_contact1 iframe{
+    height:480px;
+    width:100%;
+    padding:10px;
+}
+.btn_btnbtn1 {
+    cursor: pointer;
+    background: #FF7519;
+    padding: 10px 32px 12px 35px;
+    font-weight: 800;
+    color: #fff;
+    transition:all .5s;
+}
+.btn_btnbtn1:hover{
+    background: #F6332F;
+}
+.contact_contact_btn button{
+    outline:0;
+    box-shadow: none;
+}
+.contact_contact_btn button:focus{
+    outline:0;
+    box-shadow: none;
+}
+
+.{}
+.{}
+/* end contact */
+
+/* endstyle for contact us */
+
+/* start style for login and registration */
+.modal_heading{}
+.modal_heading h5{
+    margin-top:20px;
+    font-weight: 800;
+    font-size: 20px;
+}
+.bitton{
+    cursor: pointer;
+    background: #FF7519;
+    padding: 10px 32px 12px 35px;
+    font-weight: 800;
+    color: #fff;
+    transition:all .5s;
+    border:none;
+}
+.bitton_bitton .bitton:focus{
+    outline:0;
+    border:none;
+    box-shadow:none;
+}
+.{}
+.{}
+.{}
+.{}
+.{}
+.{}
+/* start style for login and registration */
+
+/* style for delers login area */
+.delears_login_area{
+    padding:50px 0px;
+}
+.delears_login{}
+.login_top_text h2{
+    font-weight: 800;
+    color:#000;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+.login_option{
+    box-shadow: 0px 0px 20px 0px #EDEDED;
+    padding:20px;
+}
+.login_option p{
+    font-weight:800;
+    text-transform: uppercase;
+    margin-top:20px;
+    margin-bottom:20px;
+
+}
+/* style for delers login area */
+
+/* start style for rent a car */
+.renta_car_area{
+    padding:80px 0px 80px 0px;
+}
+.single_left_renta_car{
+    position:relative;
+}
+.midel_view ul li{
+    font-weight: 600;
+    padding: 10px;
+    text-transform: capitalize;
+    list-style-type: disc;
+}
+.single_top_heading{
+    position: absolute;
+    top:20px;
+    left:20px;
+}
+.single_top_heading{
+	padding:20px 0px 30px 0px;
+}
+.single_top_heading h4 {
+    background: #FF7519;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    font-weight: 800;
+    text-align: center;
+}
+
+.single_left_text img{
+    border-radius: 5px;
+}
+.single_left_renta_car h2 {
+    text-transform: capitalize;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.single_left_renta_car p {
+    font-size: 15px;
+    line-height: 25px;
+    padding-bottom: 30px;
+}
+.single_car_text h5 {
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.full_single_car a{
+    text-decoration: none;
+    border:none;
+    color:#fff;
+}
+.rent_contact {
+    color: #fff;
+    background: #FF7519;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    font-weight: 800;
+    border-radius: 30px 0px 26px 0px;
+    margin-bottom: 24px;
+}
+.rent_contact :hover{
+    color: #fff;
+    background: #FF7519;
+}
+.rent_contact12 {
+    margin-top:10px;
+    color: #fff;
+    background: #2B2B91;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    font-weight: 800;
+    border-radius: 30px 0px 26px 0px;
+    margin-bottom: 24px;
+}
+.rent_contact12 :hover{
+    color: #fff;
+    background: #2B2B91;
+}
+.rent_contact1 {
+    color: #fff;
+    background: #2B2B91;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    font-weight: 800;
+    border-radius: 30px 0px 26px 0px;
+    margin-bottom: 24px;
+}
+.rent_contact1 :hover{
+    color: #fff;
+    background: #2B2B91;
+}
+.midel_view a{
+    text-decoration: none;
+    text-align: center;
+    color:#fff;
+}
+.midel_view1 a{
+    text-decoration: none;
+    text-align: center;
+    color:#fff;
+}
+.{}
+.{}
+.{}
+.{}
+/* start style for rent a car */
+
+/* start style for shopping cart */
+.pading_bottom h5{
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.price_order_now a{
+    text-decoration: none;
+    color:#fff;
+}
+/* start style for shopping cart */
+
+/* style for single car view */
+.single_car_view_area{}
+.single_car_view{}
+.single_car_view_title h5{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 24px;
+}
+.single_car_view_image img{
+    width:100%;
+}
+.car_discription h2{
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.discription_text{}
+.discription_text ul li{
+    font-size:15px;
+    list-style: circle;
+}
+.single_car_buy h2{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.single_car_buy p {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.single_car_buy a{
+    text-decoration: none;
+    cursor: pointer;
+    background: #FF7519;
+    padding: 10px 32px 12px 35px;
+    font-weight: 800;
+    color: #fff;
+    transition: all .5s;
+    border: none;
+}
+.table thead th {
+    border-bottom: 2px solid transparent;
+}
+.login_option label {
+    font-weight: 600;
+    font-size: 15px;
+}
+/* style for single car view */
+
+
+
+
+
+

@@ -1,0 +1,230 @@
+<!-- back top button -->
+<div class="scroll_top">
+    <i class="fa fa-arrow-up"></i>
+</div>
+<!-- back top button -->
+
+<!-- start header one -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-0">
+    <div class="container">
+        <div class="d-md-flex custom_nav_select navbar-collapse">
+            <ul class="navbar-nav custom_padding_nav  mr-md-auto flex-row justify-content-center">
+                <li class="nav-item  dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dealers
+                    </a>
+                    <div class="dropdown-menu position-absolute">
+                        <a class="dropdown-item" href="login.html">login</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="registration.html">Become a dealer with autos24 </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <div class="form-group custion_option">
+                        <select class="form-control custom_options top_single_select">
+                            <option select="selected">select language</option>
+                            <option >italian</option>
+                            <option>bulgarian</option>
+                            <option>albanian</option>
+                            <option>russian</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <div class="login_register text-right">
+                <a class="border_border" href="#"><i class="fa fa-envelope-o"></i>infocarsinghana@gmail.com
+                </a>
+                <a href="#"><i class="fa fa-envelope-o"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#" data-toggle="modal"
+                   data-target="#login" class="login">login</a>
+                <a href="#"data-toggle="modal"
+                   data-target="#registration" class="login">register</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- end  header one -->
+
+<!-- apply now modal-->
+<div
+    class="modal fade"
+    id="login"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal_heading">
+                <h5 class="modal-title text-center" id="exampleModalCenterTitle">
+                    Fill out the form to login
+                </h5>
+            </div>
+            <div class="modal-header">
+                <div class="logo_fest">
+                    <a href="#"><img src="{{asset('public/assets/fontend/img/logo.png')}}" width="50%" alt=""/></a>
+                </div>
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="contact_right">
+                    <form>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control border_border"
+                                id="exampleInputPassword1"
+                                placeholder="Enter email"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="password"
+                                class="form-control border_border"
+                                id="exampleInputEmail1"
+                                aria-describedby="emailHelp"
+                                placeholder="Enter password"
+                            />
+                        </div>
+                        <div class="bitton_bitton text-center">
+                            <button type="submit" class="bitton text-center">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- apply now modal-->
+
+<!-- apply now modal-->
+<div
+    class="modal fade"
+    id="registration"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal_heading">
+                <h5 class="modal-title top_title_mode text-center" id="exampleModalCenterTitle">
+                    Fill out the form to registration
+                </h5>
+            </div>
+            <div class="modal-header">
+                <div class="logo_fest">
+                    <a href="#"><img src="{{asset('public/assets/fontend/img/logo.png')}}" width="50%" alt=""/></a>
+                </div>
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="contact_right">
+                    <form>
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                class="form-control border_border"
+                                id="exampleInputEmail1"
+                                aria-describedby="emailHelp"
+                                placeholder="Enter name"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control border_border"
+                                id="exampleInputPassword1"
+                                placeholder="Enter email"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control border_border"
+                                id="exampleInputPassword1"
+                                placeholder="Enter phone number"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="password"
+                                class="form-control border_border"
+                                id="exampleInputPassword1"
+                                placeholder="Enter password"
+                            />
+                        </div>
+                        <div class="bitton_bitton text-center">
+                            <button type="submit" class="bitton text-center">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- apply now modal-->
+
+<!-- start header area -->
+<div class="header_area">
+    <nav class="navbar navbar-expand-md py-3" id="navbar-example">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="{{asset('public/assets/fontend/img/logo.png')}}" alt="logo"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon icon_bar"><i class="fa fa-bars" ></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="navbar-nav nav nav-pills ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#vip">Dealers<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html"> service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="renta-car.html">Rent a car</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#instruction">forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="E-store.html">E-Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</div>
+<!-- end header area -->
