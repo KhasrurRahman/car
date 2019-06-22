@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00a3948c-46a7-441f-bbf2-88c0e1a529d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/Add/post_a_add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/blank.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/dashbord.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashbordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashbordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/leftsidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/leftsidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/fontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/fontend/partial/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_21_053734_create_post_adds_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_21_053734_create_post_adds_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AddPostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="48">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#47#83#0#PHP" expanded="true" />
               </folding>
@@ -52,39 +43,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend/leftsidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
+            <state relative-caret-position="828">
               <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/Add/post_a_add.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2160">
-              <caret line="244" column="80" selection-start-line="244" selection-start-column="80" selection-end-line="244" selection-end-column="80" />
-              <folding>
-                <element signature="e#17747#18083#0#HTML" />
-                <element signature="e#18104#18440#0#HTML" />
-                <element signature="e#18461#18797#0#HTML" />
-                <element signature="e#18818#19154#0#HTML" />
-                <element signature="e#19175#19511#0#HTML" />
-              </folding>
+            <state relative-caret-position="8328">
+              <caret line="330" column="30" selection-start-line="330" selection-start-column="30" selection-end-line="330" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend/app.blade.php">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_21_053734_create_post_adds_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="32" column="110" selection-start-line="32" selection-start-column="110" selection-end-line="32" selection-end-column="110" />
-              <caret line="35" column="80" selection-start-line="35" selection-start-column="80" selection-end-line="35" selection-end-column="80" />
-              <caret line="38" column="92" selection-start-line="38" selection-start-column="92" selection-end-line="38" selection-end-column="92" />
-              <caret line="41" column="99" selection-start-line="41" selection-start-column="99" selection-end-line="41" selection-end-column="99" />
-              <caret line="44" column="102" selection-start-line="44" selection-start-column="102" selection-end-line="44" selection-end-column="102" />
-              <caret line="47" column="100" selection-start-line="47" selection-start-column="100" selection-end-line="47" selection-end-column="100" />
-              <caret line="50" column="88" selection-start-line="50" selection-start-column="88" selection-end-line="50" selection-end-column="88" />
+            <state relative-caret-position="465">
+              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -108,7 +86,6 @@
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_06_19_102956_create_roles_table.php" />
         <option value="$PROJECT_DIR$/app/role.php" />
         <option value="$PROJECT_DIR$/database/seeds/RoleTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
@@ -141,6 +118,8 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/backend/app.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AddPostController.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Add/post_a_add.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_19_102956_create_roles_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_21_053734_create_post_adds_table.php" />
       </list>
     </option>
   </component>
@@ -230,7 +209,7 @@
       <path value="$PROJECT_DIR$/vendor/brian2694/laravel-toastr" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="654" />
     <option name="height" value="1001" />
@@ -300,12 +279,6 @@
               <item name="car" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="car" type="b2602c69:ProjectViewProjectNode" />
-              <item name="car" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="car" type="b2602c69:ProjectViewProjectNode" />
@@ -427,12 +400,13 @@
       <workItem from="1561048145537" duration="4358000" />
       <workItem from="1561086491587" duration="8851000" />
       <workItem from="1561127135359" duration="599000" />
-      <workItem from="1561203294677" duration="2684000" />
+      <workItem from="1561203294677" duration="3175000" />
+      <workItem from="1561225494259" duration="1976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33801000" />
+    <option name="totallyTimeSpent" value="36268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
@@ -485,13 +459,6 @@
           <folding>
             <element signature="e#3099#3105#0#HTML" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_19_102956_create_roles_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -646,13 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -781,23 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AddPostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="e#47#83#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend/leftsidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1200">
@@ -811,16 +754,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_19_102956_create_roles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_21_053734_create_post_adds_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Add/post_a_add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2160">
-          <caret line="244" column="80" selection-start-line="244" selection-start-column="80" selection-end-line="244" selection-end-column="80" />
+        <state relative-caret-position="8328">
+          <caret line="330" column="30" selection-start-line="330" selection-start-column="30" selection-end-line="330" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend/leftsidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AddPostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
-            <element signature="e#17747#18083#0#HTML" />
-            <element signature="e#18104#18440#0#HTML" />
-            <element signature="e#18461#18797#0#HTML" />
-            <element signature="e#18818#19154#0#HTML" />
-            <element signature="e#19175#19511#0#HTML" />
+            <element signature="e#47#83#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
