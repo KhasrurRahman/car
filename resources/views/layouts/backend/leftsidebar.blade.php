@@ -10,7 +10,7 @@
             <div class="btn-group user-helper-dropdown">
                 <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                 <ul class="dropdown-menu pull-right">
-                    <li><a href="{{ Auth::user()->role->id == 1 ? route('admin.setting') : route('author.setting') }}"><i class="material-icons">person</i>Profile</a></li>
+                    <li><a href="}"><i class="material-icons">person</i>Profile</a></li>
                     <li role="separator" class="divider"></li>
                     <li>
                         <a class="dropdown-item" href="{{ route('logout') }}"
@@ -35,68 +35,24 @@
     <div class="menu">
         <ul class="list">
             <li class="header">MAIN NAVIGATION</li>
-{{--            @if(Request::is('admin*'))--}}
-{{--                <li class="{{Request::is('admin/dashbord')?'active': ''}}">--}}
-{{--                    <a href="{{route('admin.dashbord')}}">--}}
-{{--                        <i class="material-icons">home</i>--}}
-{{--                        <span>Dashbord</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+            @if(Request::is('admin*'))
+                <li class="{{Request::is('admin/dashbord')?'active': ''}}">
+                    <a href="{{route('admin.dashbord')}}">
+                        <i class="material-icons">home</i>
+                        <span>Dashbord</span>
+                    </a>
+                </li>
 
-{{--                <li class="{{Request::is('admin/tag*')?'active': ''}}">--}}
-{{--                    <a href="{{route('admin.tag.index')}}">--}}
-{{--                        <i class="material-icons">label</i>--}}
-{{--                        <span>Tag</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="{{Request::is('admin/category*')?'active': ''}}">--}}
-{{--                    <a href="{{route('admin.category.index')}}">--}}
-{{--                        <i class="material-icons">label</i>--}}
-{{--                        <span>Category</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="{{Request::is('admin/post*')?'active': ''}}">--}}
-{{--                    <a href="{{route('admin.post.index')}}">--}}
-{{--                        <i class="material-icons">library_books</i>--}}
-{{--                        <span>Posts</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="{{Request::is('admin/addpos')?'active': ''}}">
+                    <a href="{{route('admin.addpost.index')}}">
+                        <i class="material-icons">home</i>
+                        <span>Post A Add</span>
+                    </a>
+                </li>
 
-{{--                <li class="{{Request::is('admin/peinding')?'active': ''}}">--}}
-{{--                    <a href="{{route('admin.post.pending')}}">--}}
-{{--                        <i class="material-icons">library_books</i>--}}
-{{--                        <span>Pending Posts</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
 
-{{--                <li class="{{Request::is('admin/scriber')?'active': ''}}">--}}
-{{--                    <a href="{{route('admin.subscriber.index')}}">--}}
-{{--                        <i class="material-icons">subscriptions</i>--}}
-{{--                        <span>Subscribers</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
 
-{{--                <li class="header">System</li>--}}
-{{--                <li class="{{Request::is('admin/seting')?'active': ''}}">--}}
-{{--                    <a href="{{route('admin.setting')}}">--}}
-{{--                        <i class="material-icons">settings</i>--}}
-{{--                        <span>Admin Settings</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--            <li>--}}
-{{--                    <a class="dropdown-item" href="{{ route('logout') }}"--}}
-{{--                       onclick="event.preventDefault();--}}
-{{--                                                     document.getElementById('logout-form').submit();">--}}
-
-{{--                        <i class="material-icons">input</i>Log Out--}}
-{{--                    </a>--}}
-
-{{--                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-{{--                        @csrf--}}
-{{--                    </form>--}}
-{{--            </li>--}}
-{{--                </li>--}}
-{{--             @endif--}}
+             @endif
 
 
 

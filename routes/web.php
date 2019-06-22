@@ -21,18 +21,21 @@ Route::get('/', function () {
 
 
 Auth::routes(['verify' => true]);
-
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+//admin route
 Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admin','verified']],function(){
     Route::get('dashbord','DashbordController@index')->name('dashbord');
+    Route::resource('addpost','AddPostController');
 });
 
+//customer route
 Route::group(['as'=>'author.','prefix'=>'author','namespace'=>'Author','middleware'=>['auth','author','verified']],function(){
     Route::get('dashbord','DashbordController@index')->name('dashbord');
 });
 
+//dealer route
 Route::group(['as'=>'diller.','prefix'=>'diller','namespace'=>'Diller','middleware'=>['auth','diller','verified']],function(){
     Route::get('dashbord','DashbordController@index')->name('dashbord');
 });
