@@ -44,7 +44,7 @@
                     <div class="form-group row">
                         <label for="inputPassword" class="col-sm-4 col-form-label"> Date of first registration</label>
                         <div class="col-sm-8">
-                            <input type="date" class="form-control" id="inputPassword" name="Date_of_first-registration">
+                            <input type="date" class="form-control" id="inputPassword" name="Date_of_first_registration">
                         </div>
                     </div>
                     <div class="form-group row">

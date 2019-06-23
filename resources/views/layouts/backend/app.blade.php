@@ -122,7 +122,7 @@
 
 <script src="{{asset('public/assets/backend/plugins/bootstrap-select/js/bootstrap-select.js')}}"></script>
 
-<script src="{{asset('public/assets/backend/plugins/plugins/dropzone/dropzone.js')}}"></script>
+<script src="{{asset('public/assets/backend/plugins/dropzone/dropzone.js')}}"></script>
 
 <!-- Input Mask Plugin Js -->
 <script src="{{asset('public/assets/backend/plugins/jquery-inputmask/jquery.inputmask.bundle.js')}}"></script>
@@ -141,9 +141,7 @@
 <!-- Custom Js -->
 <script src="{{asset('public/assets/backend/js/admin.js')}}"></script>
 
-<script src="{{asset('public/assets/backendplugins/node-waves/waves.js')}}"></script>
 
-<script src="{{asset('public/assets/backend/js/pages/forms/advanced-form-elements.js')}}"></script>
 <!-- Demo Js -->
 <script src="{{asset('public/assets/backend/js/demo.js')}}"></script>
 <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>

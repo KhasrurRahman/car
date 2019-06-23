@@ -43,10 +43,17 @@
                     </a>
                 </li>
 
-                <li class="{{Request::is('admin/addpos')?'active': ''}}">
-                    <a href="{{route('admin.addpost.index')}}">
+                <li class="{{Request::is('admin/addpos/create')?'active': ''}}">
+                    <a href="{{route('admin.addpost.create')}}">
                         <i class="material-icons">home</i>
                         <span>Post A Add</span>
+                    </a>
+                </li>
+
+                <li class="{{Request::is('admin/addpos/')?'active': ''}}">
+                    <a href="{{route('admin.addpost.index')}}">
+                        <i class="material-icons">home</i>
+                        <span>All Add</span>
                     </a>
                 </li>
 
