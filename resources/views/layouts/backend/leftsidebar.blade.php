@@ -43,63 +43,41 @@
                     </a>
                 </li>
 
-                <li class="{{Request::is('admin/addpos/create')?'active': ''}}">
-                    <a href="{{route('admin.addpost.create')}}">
+                <li class="{{Request::is('admin/addpos*')?'active': ''}}">
+                    <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+                        <i class="material-icons">face</i>
+                        <span>Adds</span>
+                    </a>
+                    <ul class="ml-menu" style="display: none;">
+                        <li>
+                            <a href="{{route('admin.addpost.index')}}" class=" waves-effect waves-block">All Adds
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('admin.addpost.create')}}" class=" waves-effect waves-block">Add New Adds
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="{{Request::is('admin/dealer*')?'active': ''}}">
+                    <a href="{{route('admin.dealer.index')}}">
                         <i class="material-icons">home</i>
-                        <span>Post A Add</span>
+                        <span>All Dealers</span>
                     </a>
                 </li>
 
-                <li class="{{Request::is('admin/addpos/')?'active': ''}}">
-                    <a href="{{route('admin.addpost.index')}}">
+                <li class="{{Request::is('admin/customer*')?'active': ''}}">
+                    <a href="{{route('admin.customer.index')}}">
                         <i class="material-icons">home</i>
-                        <span>All Add</span>
+                        <span>All Customers</span>
                     </a>
                 </li>
-
 
 
              @endif
-
-
-
-{{--            @if(Request::is('author*'))--}}
-{{--                <li class="{{Request::is('author/dashbord')?'active': ''}}">--}}
-{{--                    <a href="{{route('author.dashbord')}}">--}}
-{{--                        <i class="material-icons">home</i>--}}
-{{--                        <span>Dashbord</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-
-{{--                <li class="{{Request::is('author/post*')?'active': ''}}">--}}
-{{--                    <a href="{{route('author.post.index')}}">--}}
-{{--                        <i class="material-icons">library_books</i>--}}
-{{--                        <span>Posts</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-
-{{--                <li class="header">System</li>--}}
-{{--                <li class="{{Request::is('author/seting')?'active': ''}}">--}}
-{{--                    <a href="{{route('author.setting')}}">--}}
-{{--                        <i class="material-icons">settings</i>--}}
-{{--                        <span>Author Settings</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li>--}}
-{{--                    <a class="dropdown-item" href="{{ route('logout') }}"--}}
-{{--                       onclick="event.preventDefault();--}}
-{{--                                                     document.getElementById('logout-form').submit();">--}}
-
-{{--                        <i class="material-icons">input</i>Log Out--}}
-{{--                    </a>--}}
-
-{{--                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-{{--                        @csrf--}}
-{{--                    </form>--}}
-{{--                </li>--}}
-{{--                </li>--}}
-{{--            @endif--}}
-
 
         </ul>
     </div>

@@ -16,7 +16,7 @@
                     <div class="dropdown-menu position-absolute">
                         <a class="dropdown-item" href="login.html">login</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="registration.html">Become a dealer with autos24 </a>
+                        <a class="dropdown-item" href="{{route('dealerRegistration')}}">Become a dealer with autos24 </a>
                     </div>
                 </li>
                 <li class="nav-item">

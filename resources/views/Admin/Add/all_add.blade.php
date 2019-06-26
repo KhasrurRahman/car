@@ -14,8 +14,8 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            All post
-                            <span class="badge bg-blue"></span>
+                            All Adds -
+                            <span class="badge bg-blue">{{ $posts->count() }}</span>
                         </h2>
 
                     </div>
@@ -25,45 +25,128 @@
                                 <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Title</th>
-                                    <th>Author</th>
-                                    <th><i class="material-icons">visibility</i></th>
-                                    <th>Is approve</th>
-                                    <th>Status</th>
-                                    {{--<th>Updated At</th>--}}
-                                    <th>Created At</th>
-                                    <th>Action</th>
+                                    <th>Category</th>
+                                    <th>Make</th>
+                                    <th>Model</th>
+                                    <th>Date of first registration</th>
+                                    <th>Power</th>
+                                    <th>Kilometer</th>
+                                    <th>vehicle NO.</th>
+                                    <th>My vehicle</th>
+                                    <th>Price</th>
+                                    <th>VAT rate</th>
+                                    <th>Perm. GVW</th>
+                                    <th>Admissible haulage weight</th>
+                                    <th>Payload</th>
+                                    <th>Empty weight</th>
+                                    <th>Gearing type</th>
+                                    <th>Brakes</th>
+                                    <th>Suspension</th>
+                                    <th>Axle configuration</th>
+                                    <th>Wheels distance</th>
+                                    <th>Tyre size</th>
+                                    <th>Fuel type</th>
+                                    <th>CO2-Emmision combined</th>
+                                    <th>Fuel consumption combined</th>
+                                    <th>urban</th>
+                                    <th>Colour</th>
+                                    <th>Attachment parts</th>
+                                    <th>Other features</th>
+                                    <th>Further information</th>
+                                    <th>image-1</th>
+                                    <th>image-2</th>
+                                    <th>image-3</th>
+                                    <th>image-4</th>
+                                    <th>image-5</th>
+                                    <th>Action-6</th>
 
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Title</th>
-                                    <th>Author</th>
-                                    <th><i class="material-icons">visibility</i></th>
-                                    <th>Is approve</th>
-                                    <th>Status</th>
-                                    {{--<th>Updated At</th>--}}
-                                    <th>Created At</th>
-                                    <th>Action</th>
+                                    <th>Category</th>
+                                    <th>Make</th>
+                                    <th>Model</th>
+                                    <th>Date of first registration</th>
+                                    <th>Power</th>
+                                    <th>Kilometer</th>
+                                    <th>vehicle NO.</th>
+                                    <th>My vehicle</th>
+                                    <th>Price</th>
+                                    <th>VAT rate</th>
+                                    <th>Perm. GVW</th>
+                                    <th>Admissible haulage weight</th>
+                                    <th>Payload</th>
+                                    <th>Empty weight</th>
+                                    <th>Gearing type</th>
+                                    <th>Brakes</th>
+                                    <th>Suspension</th>
+                                    <th>Axle configuration</th>
+                                    <th>Wheels distance</th>
+                                    <th>Tyre size</th>
+                                    <th>Fuel type</th>
+                                    <th>CO2-Emmision combined</th>
+                                    <th>Fuel consumption combined</th>
+                                    <th>urban</th>
+                                    <th>Colour</th>
+                                    <th>Attachment parts</th>
+                                    <th>Other features</th>
+                                    <th>Further information</th>
+                                    <th>image-1</th>
+                                    <th>image-2</th>
+                                    <th>image-3</th>
+                                    <th>image-4</th>
+                                    <th>image-5</th>
+                                    <th>Action-6</th>
+
                                 </tr>
                                 </tfoot>
                                 <tbody>
-
+                                @foreach($posts as $key=>$post)
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
+                                        <td>{{ $key + 1 }}</td>
+                                        <td>{{$post->category}}</td>
+                                        <td>{{$post->make}}</td>
+                                        <td>{{$post->model}}</td>
+                                        <td>{{$post->date_of_first_registration}}</td>
+                                        <td>{{$post->power}}</td>
+                                        <td>{{$post->kilometer}}</td>
+                                        <td>{{$post->vehicle_no}}</td>
+                                        <td>{{$post->vehicle}}</td>
+                                        <td>{{$post->price}}</td>
+                                        <td>{{$post->vat}}</td>
+                                        <td>{{$post->Perm_gvw}}</td>
+                                        <td>{{$post->Admissible_haulage_weight}}</td>
+                                        <td>{{$post->payload}}</td>
+                                        <td>{{$post->empty_weight}}</td>
+                                        <td>{{$post->gearing_type}}</td>
+                                        <td>{{$post->brakes}}</td>
+                                        <td>{{$post->suspension}}</td>
+                                        <td>{{$post->axle_configuration}}</td>
+                                        <td>{{$post->wheels_distance}}</td>
+                                        <td>{{$post->tyre_size}}</td>
+                                        <td>{{$post->CO2_Emmision_combined}}</td>
+                                        <td>{{$post->Fuel_consumption_combined}}</td>
+                                        <td>{{$post->Colour}}</td>
+                                        <td>{{$post->Attachment_parts}}</td>
+                                        <td>{{$post->Other_features}}</td>
+                                        <td>{{$post->Other_features}}</td>
+                                        <td>{{$post->Other_features}}</td>
+                                        <td>{{$post->Other_features}}</td>
+                                        <td><img class="img-responsive thumbnail"
+                                                 src="{{ url('storage/app/public/post/'.$post->image_1) }}"></td>
+                                        <td><img class="img-responsive thumbnail"
+                                                 src="{{ url('storage/app/public/post/'.$post->image_2) }}"></td>
+                                        <td><img class="img-responsive thumbnail"
+                                                 src="{{ url('storage/app/public/post/'.$post->image_3) }}"></td>
+                                        <td><img class="img-responsive thumbnail"
+                                                 src="{{ url('storage/app/public/post/'.$post->image_4) }}"></td>
+                                        <td><img class="img-responsive thumbnail"
+                                                 src="{{ url('storage/app/public/post/'.$post->image_5) }}"></td>
 
-                                        </td>
-                                        <td>
 
-                                        </td>
-                                        {{--<td>{{ $post->updated_at }}</td>--}}
-                                        <td></td>
+
                                         <td class="text-center">
                                             <a href="" class="btn btn-info waves-effect">
                                                 <i class="material-icons">visibility</i>
@@ -87,7 +170,7 @@
                                     </tr>
 
 
-
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

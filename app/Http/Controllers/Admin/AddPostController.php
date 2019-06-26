@@ -21,7 +21,8 @@ class AddPostController extends Controller
      */
     public function index()
     {
-        return view('Admin.Add.all_add');
+        $posts = post_add::all();
+        return view('Admin.Add.all_add',compact('posts'));
     }
 
     /**
