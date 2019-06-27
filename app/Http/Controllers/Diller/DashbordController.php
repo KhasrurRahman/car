@@ -8,6 +8,6 @@ use App\Http\Controllers\Controller;
 class DashbordController extends Controller
 {
     public function index(){
-        return view('diller.home');
+        return view('diller.dashbord');
     }
 }

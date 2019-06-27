@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('welcome');
     }
 
     public function dealerRegistration()
@@ -34,9 +34,10 @@ class HomeController extends Controller
         return view('Diller.dealer_registration');
     }
 
-    public function rrr(Request $request)
+
+    public function dillerLogin()
     {
-        return $request;
+        return view('Diller.login');
     }
 
 }

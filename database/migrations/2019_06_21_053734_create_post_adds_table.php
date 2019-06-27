@@ -54,6 +54,7 @@ class CreatePostAddsTable extends Migration
             $table->string('image_3')->nullable();
             $table->string('image_4')->nullable();
             $table->string('image_5')->nullable();
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }

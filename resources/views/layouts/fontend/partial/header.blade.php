@@ -10,11 +10,13 @@
         <div class="d-md-flex custom_nav_select navbar-collapse">
             <ul class="navbar-nav custom_padding_nav  mr-md-auto flex-row justify-content-center">
                 <li class="nav-item  dropdown">
+                    @if (!\Illuminate\Support\Facades\Auth::check())
                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dealers
                     </a>
                     <div class="dropdown-menu position-absolute">
-                        <a class="dropdown-item" href="login.html">login</a>
+
+                        <a class="dropdown-item" href="{{route('dillerLogin')}}">login</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{route('dealerRegistration')}}">Become a dealer with autos24 </a>
                     </div>
@@ -22,17 +24,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <div class="form-group custion_option">
-                        <select class="form-control custom_options top_single_select">
-                            <option select="selected">select language</option>
-                            <option >italian</option>
-                            <option>bulgarian</option>
-                            <option>albanian</option>
-                            <option>russian</option>
-                        </select>
-                    </div>
-                </li>
+                @elseif (\Illuminate\Support\Facades\Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                @endif
             </ul>
             <div class="login_register text-right">
                 <a class="border_border" href="#"><i class="fa fa-envelope-o"></i>infocarsinghana@gmail.com
@@ -76,7 +72,7 @@
             </div>
             <div class="modal-header">
                 <div class="logo_fest">
-                    <a href="#"><img src="{{asset('public/assets/fontend/img/logo.png')}}" width="50%" alt=""/></a>
+                    <a href="{{route('home')}}"><img src="{{asset('public/assets/fontend/img/logo.png')}}" width="50%" alt=""/></a>
                 </div>
                 <button
                     type="button"
@@ -169,7 +165,7 @@
             </div>
             <div class="modal-header">
                 <div class="logo_fest">
-                    <a href="#"><img src="{{asset('public/assets/fontend/img/logo.png')}}" width="50%" alt=""/></a>
+                    <a href="{{route('home')}}"><img src="{{asset('public/assets/fontend/img/logo.png')}}" width="50%" alt=""/></a>
                 </div>
                 <button
                     type="button"
@@ -255,7 +251,7 @@
     <nav class="navbar navbar-expand-md py-3" id="navbar-example">
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="{{asset('public/assets/fontend/img/logo.png')}}" alt="logo"></a>
+                <a href="{{route('home')}}"><img src="{{asset('public/assets/fontend/img/logo.png')}}" alt="logo"></a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon icon_bar"><i class="fa fa-bars" ></i></span>

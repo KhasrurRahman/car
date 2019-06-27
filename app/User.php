@@ -44,4 +44,8 @@ class User extends Authenticatable implements MustVerifyEmail
     public function post(){
         return $this->hasMany(post_add::class);
     }
+
+    public function diller_info(){
+        return $this->hasOne(Diller_info::class,'user_id');
+    }
 }

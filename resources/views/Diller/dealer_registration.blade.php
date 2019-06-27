@@ -35,19 +35,19 @@
                                 <div class="form-group row">
                                     <label for="inputPassword" class="col-sm-4 col-form-label">Name of Company</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="inputPassword">
+                                        <input type="text" class="form-control" id="inputPassword" name="company_name">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputPassword" class="col-sm-4 col-form-label">Street</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="inputPassword">
+                                        <input type="text" class="form-control" id="inputPassword" name="street">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputPassword" class="col-sm-4 col-form-label">Postal code</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="inputPassword">
+                                        <input type="text" class="form-control" id="inputPassword" name="postal_code">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -59,7 +59,7 @@
                                 <div class="form-group row">
                                     <label for="inputPassword" class="col-sm-4 col-form-label">Country</label>
                                     <div class="col-sm-8 float-left d-flex">
-                                        <select class="custom-select form-control">
+                                        <select class="custom-select form-control" name="country">
                                             <option selected>choose you country</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -70,7 +70,7 @@
                                 <div class="form-group row">
                                     <label for="inputPassword" class="col-sm-4 col-form-label">Website</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="inputPassword">
+                                        <input type="text" class="form-control" id="inputPassword" name="website">
                                     </div>
                                 </div>
                                 <p>contact person</p>

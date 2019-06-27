@@ -75,9 +75,34 @@
                         <span>All Customers</span>
                     </a>
                 </li>
-
-
              @endif
+
+
+
+            @if(Request::is('diller*'))
+                <li class="{{Request::is('diller/dashbord')?'active': ''}}">
+                    <a href="{{route('diller.dashbord')}}">
+                        <i class="material-icons">home</i>
+                        <span>Dashbord</span>
+                    </a>
+                </li>
+
+                <li class="{{Request::is('diller/diller*')?'active': ''}}">
+                    <a href="{{route('diller.diller.index')}}">
+                        <i class="material-icons">home</i>
+                        <span>Place A Add</span>
+                    </a>
+                </li>
+
+                <li class="{{Request::is('diller/All_post*')?'active': ''}}">
+                    <a href="{{route('diller.All_post')}}">
+                        <i class="material-icons">home</i>
+                        <span>All Your Post</span>
+                    </a>
+                </li>
+
+            @endif
+
 
         </ul>
     </div>

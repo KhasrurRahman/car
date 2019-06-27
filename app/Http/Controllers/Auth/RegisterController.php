@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Diller_info;
 use App\User;
 use App\Http\Controllers\Controller;
+use http\Env\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -72,12 +74,24 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         if ($data['role_id']==3){
-            return User::create([
+
+
+            $user =  User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'role_id' => $data['role_id'],
                 'password' => Hash::make($data['password']),
             ]);
+            $info = new Diller_info();
+            $info->company_name = $data['company_name'];
+            $info->street = $data['street'];
+            $info->postal_code = $data['postal_code'];
+            $info->country = $data['country'];
+            $info->website = $data['website'];
+            $info->user_id = $user->id;
+            $info->save();
+
+            return $user;
         }
 
 

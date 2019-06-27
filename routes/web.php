@@ -24,6 +24,7 @@ Auth::routes(['verify' => true]);
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('dealerRegistration', 'HomeController@dealerRegistration')->name('dealerRegistration');
+Route::get('dillerLogin', 'HomeController@dillerLogin')->name('dillerLogin');
 Route::post('rrr', 'HomeController@rrr')->name('rrr');
 
 //admin route
@@ -43,4 +44,5 @@ Route::group(['as'=>'author.','prefix'=>'author','namespace'=>'Author','middlewa
 Route::group(['as'=>'diller.','prefix'=>'diller','namespace'=>'Diller','middleware'=>['auth','diller','verified']],function(){
     Route::get('dashbord','DashbordController@index')->name('dashbord');
     Route::resource('diller','DillerController');
+    Route::get('All_post','DillerController@All_post')->name('All_post');
 });
