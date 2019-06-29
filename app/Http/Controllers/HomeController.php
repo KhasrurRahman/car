@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\post_add;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +27,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $top = post_add::where('status',1)->where('add_type',1)->get();
+        return view('welcome',compact('top'));
     }
 
     public function dealerRegistration()

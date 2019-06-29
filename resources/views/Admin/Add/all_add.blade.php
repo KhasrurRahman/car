@@ -148,18 +148,18 @@
 
 
                                         <td class="text-center">
-                                            <a href="" class="btn btn-info waves-effect">
+                                            <a href="{{route('admin.addpost.show',$post->id)}}" class="btn btn-info waves-effect">
                                                 <i class="material-icons">visibility</i>
                                             </a>
 
-                                            <a href="" class="btn btn-info waves-effect">
+                                            <a href="{{route('admin.addpost.edit',$post->id)}}" class="btn btn-info waves-effect">
                                                 <i class="material-icons">edit</i>
                                             </a>
 
-                                            <button class="btn btn-danger waves-effect" type="button" onclick="">
+                                            <button class="btn btn-danger waves-effect" type="button" onclick="deletepost({{ $post->id }})">
                                                 <i class="material-icons">delete</i>
                                             </button>
-                                            <form id="delete-form-" action="" method="post" style="display: none">
+                                            <form id="delete-form-{{$post->id}}" action="{{route('admin.addpost.destroy',$post->id)}}" method="post" style="display: none">
                                                 @csrf
                                                 @method('DELETE')
 
@@ -186,4 +186,41 @@
 
 @endsection
 @push('js')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.11/dist/sweetalert2.all.min.js"></script>
+
+    <script type="text/javascript">
+        function deletepost(id) {
+            const swalWithBootstrapButtons = swal.mixin({
+                confirmButtonClass: 'btn btn-success',
+                cancelButtonClass: 'btn btn-danger',
+                buttonsStyling: false,
+            })
+
+            swalWithBootstrapButtons({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel!',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.value) {
+                    event.preventDefault();
+                    document.getElementById('delete-form-'+id).submit();
+                } else if (
+                    // Read more about handling dismissals
+                    result.dismiss === swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons(
+                        'Cancelled',
+                        'Your data is safe :)',
+                        'error'
+                    )
+                }
+            })
+        }
+    </script>
+
+
 @endpush

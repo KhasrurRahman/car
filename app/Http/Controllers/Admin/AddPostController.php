@@ -86,91 +86,91 @@ class AddPostController extends Controller
         {
             //make uniqe name for image
             $correntDate = Carbon::now()->toDateString();
-            $imagename =$correntDate.'-'.uniqid().'.'.$image_1->getClientOriginalExtension();
+            $imagename_1 =$correntDate.'-'.uniqid().'.'.$image_1->getClientOriginalExtension();
 
             if (!Storage::disk('public')->exists('post'))
             {
                 Storage::disk('public')->makeDirectory('post');
             }
 
-            $postimage = Image::make($image_1)->resize(500,400)->stream();
-            Storage::disk('public')->put('post/'.$imagename,$postimage);
+            $postimage_1 = Image::make($image_1)->resize(500,400)->stream();
+            Storage::disk('public')->put('post/'.$imagename_1,$postimage_1);
         }else{
-            $imagename = 'default.png';
+            $imagename_1 = 'default.png';
         }
 
         if (isset($image_2))
         {
             //make uniqe name for image
             $correntDate = Carbon::now()->toDateString();
-            $imagename =$correntDate.'-'.uniqid().'.'.$image_2->getClientOriginalExtension();
+            $imagename_2 =$correntDate.'-'.uniqid().'.'.$image_2->getClientOriginalExtension();
 
             if (!Storage::disk('public')->exists('post'))
             {
                 Storage::disk('public')->makeDirectory('post');
             }
 
-            $postimage = Image::make($image_2)->resize(500,400)->stream();
-            Storage::disk('public')->put('post/'.$imagename,$postimage);
+            $postimage_2 = Image::make($image_2)->resize(500,400)->stream();
+            Storage::disk('public')->put('post/'.$imagename_2,$postimage_2);
         }else{
-            $imagename = 'default.png';
+            $imagename_2 = 'default.png';
         }
 
         if (isset($image_3))
         {
             //make uniqe name for image
             $correntDate = Carbon::now()->toDateString();
-            $imagename =$correntDate.'-'.uniqid().'.'.$image_3->getClientOriginalExtension();
+            $imagename_3 =$correntDate.'-'.uniqid().'.'.$image_3->getClientOriginalExtension();
 
             if (!Storage::disk('public')->exists('post'))
             {
                 Storage::disk('public')->makeDirectory('post');
             }
 
-            $postimage = Image::make($image_3)->resize(500,400)->stream();
-            Storage::disk('public')->put('post/'.$imagename,$postimage);
+            $postimage_3 = Image::make($image_3)->resize(500,400)->stream();
+            Storage::disk('public')->put('post/'.$imagename_3,$postimage_3);
         }else{
-            $imagename = 'default.png';
+            $imagename_3 = 'default.png';
         }
 
         if (isset($image_4))
         {
             //make uniqe name for image
             $correntDate = Carbon::now()->toDateString();
-            $imagename =$correntDate.'-'.uniqid().'.'.$image_4->getClientOriginalExtension();
+            $imagename_4 =$correntDate.'-'.uniqid().'.'.$image_4->getClientOriginalExtension();
 
             if (!Storage::disk('public')->exists('post'))
             {
                 Storage::disk('public')->makeDirectory('post');
             }
 
-            $postimage = Image::make($image_4)->resize(500,400)->stream();
-            Storage::disk('public')->put('post/'.$imagename,$postimage);
+            $postimage_4 = Image::make($image_4)->resize(500,400)->stream();
+            Storage::disk('public')->put('post/'.$imagename_4,$postimage_4);
         }else{
-            $imagename = 'default.png';
+            $imagename_4 = 'default.png';
         }
 
         if (isset($image_5))
         {
             //make uniqe name for image
             $correntDate = Carbon::now()->toDateString();
-            $imagename =$correntDate.'-'.uniqid().'.'.$image_5->getClientOriginalExtension();
+            $imagename_5 =$correntDate.'-'.uniqid().'.'.$image_5->getClientOriginalExtension();
 
             if (!Storage::disk('public')->exists('post'))
             {
                 Storage::disk('public')->makeDirectory('post');
             }
 
-            $postimage = Image::make($image_5)->resize(500,400)->stream();
-            Storage::disk('public')->put('post/'.$imagename,$postimage);
+            $postimage_5 = Image::make($image_5)->resize(500,400)->stream();
+            Storage::disk('public')->put('post/'.$imagename_5,$postimage_5);
         }else{
-            $imagename = 'default.png';
+            $imagename_5 = 'default.png';
         }
-        $post->image_1 = $imagename;
-        $post->image_2 = $imagename;
-        $post->image_3 = $imagename;
-        $post->image_4 = $imagename;
-        $post->image_5 = $imagename;
+        $post->image_1 = $imagename_1;
+        $post->image_2 = $imagename_2;
+        $post->image_3 = $imagename_3;
+        $post->image_4 = $imagename_4;
+        $post->image_5 = $imagename_5;
         $post->save();
 
         Toastr::success('Add successfully save','Success');
@@ -185,7 +185,8 @@ class AddPostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = post_add::find($id);
+        return view('Admin.Add.show',compact('post'));
     }
 
     /**
@@ -196,7 +197,8 @@ class AddPostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = post_add::find($id);
+        return view('admin.add.edit',compact('post'));
     }
 
     /**
@@ -219,6 +221,48 @@ class AddPostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = post_add::find($id);
+        if (Storage::disk('public')->exists('/post/'.$post->image_1))
+        {
+            Storage::disk('public')->delete('/post/'.$post->image_1);
+        }
+
+        if (Storage::disk('public')->exists('/post/'.$post->image_2))
+        {
+            Storage::disk('public')->delete('/post/'.$post->image_2);
+        }
+
+        if (Storage::disk('public')->exists('/post/'.$post->image_3))
+        {
+            Storage::disk('public')->delete('/post/'.$post->image_3);
+        }
+
+        if (Storage::disk('public')->exists('/post/'.$post->image_4))
+        {
+            Storage::disk('public')->delete('/post/'.$post->image_4);
+        }
+
+        if (Storage::disk('public')->exists('/post/'.$post->image_5))
+        {
+            Storage::disk('public')->delete('/post/'.$post->image_5);
+        }
+
+        $post->delete();
+
+        Toastr::success('Post delete successfully','Success');
+        return redirect()->back();
+    }
+
+    public function approve($id)
+    {
+        $post = post_add::find($id);
+        if($post->status == false)
+        {
+            $post->status = true;
+            $post->save();
+        }else{
+            Toastr::info('This post already approved');
+        }
+        return redirect()->back();
     }
 }

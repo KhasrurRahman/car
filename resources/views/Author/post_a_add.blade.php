@@ -1,32 +1,31 @@
 @extends('layouts.backend.app')
-@section('title'.'dashbord')
+@section('title'.'Place A Add')
 @endsection
     @push('css')
     @endpush
 @section('content')
-
-
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row clearfix">
+        <form action="{{route('author.post.store')}}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                 <div class="card">
                     <div class="header">
                         <h2>
-                            Post A Add
-                            <span class="badge bg-blue"></span>
+                            Place A Add
                         </h2>
-
                     </div>
-                <form action="{{route('admin.addpost.store')}}" method="post" enctype="multipart/form-data">
-                    @csrf
+
                     <div class="form-group row">
                         <label for="inputPassword" class="col-sm-4 col-form-label">Category</label>
                         <div class="col-sm-8 float-left d-flex">
+
                                 <select class="form-control show-tick" data-live-search="true" name="category">
                                     <option value="car">car</option>
                                     <option value="byke">byke</option>
                                     <option value="track">track</option>
                                     <option value="volvo">volvo</option>
                                 </select>
+
                         </div>
                     </div>
                     <div class="form-group row">
@@ -371,13 +370,34 @@
                             <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image_5">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary m-t-15 waves-effect">Save</button>
-                </form>
+
         </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 
+            <div class="card">
+                <div class="header bg-cyan">
+                    <h2>
+                        Advertise Type
+                    </h2>
+                </div>
 
+                    <div class="form-line">
+                        <label for="category">select A type</label>
+                        <select name="add_type"  class="form-control show-tick" data-live-search="true">
+                                <option value="1">TOP - $200</option>
+                                <option value="2">VIP - $100</option>
+                                <option value="3">ordinary - $50</option>
+                        </select>
+                    </div>
 
             </div>
+
+        </div>
+            <button type="submit" class="btn btn-primary m-t-15 waves-effect">Save</button>
+        </form>
+    </div>
+
 @endsection
 @push('js')
 @endpush

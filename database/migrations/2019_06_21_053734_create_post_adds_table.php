@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostAddsTable extends Migration
+class   CreatePostAddsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -49,6 +49,7 @@ class CreatePostAddsTable extends Migration
             $table->string('Attachment_parts');
             $table->string('Other_features');
             $table->string('Further_information');
+            $table->integer('add_type')->default(3);
             $table->string('image_1')->nullable();
             $table->string('image_2')->nullable();
             $table->string('image_3')->nullable();

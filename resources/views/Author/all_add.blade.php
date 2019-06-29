@@ -155,7 +155,7 @@
                                                  src="{{ url('storage/app/public/post/'.$post->image_5) }}"></td>
 
                                         <td class="text-center">
-                                            <a href="{{route('diller.diller.show',$post->id)}}" class="btn btn-info waves-effect">
+                                            <a href="{{route('author.post.show',$post->id)}}" class="btn btn-info waves-effect">
                                                 <i class="material-icons">visibility</i>
                                             </a>
 

@@ -1,10 +1,9 @@
 @extends('layouts.backend.app')
-@section('title'.'show add')
+@section('title'.'pending Add')
 @endsection
 @push('css')
 @endpush
 @section('content')
-
 
     <div class="container-fluid">
 
@@ -14,7 +13,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            All Adds -
+                            Total Pending post
                             <span class="badge bg-blue">{{ $posts->count() }}</span>
                         </h2>
 
@@ -25,7 +24,6 @@
                                 <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Status</th>
                                     <th>Category</th>
                                     <th>Make</th>
                                     <th>Model</th>
@@ -66,7 +64,6 @@
                                 <tfoot>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Status</th>
                                     <th>Category</th>
                                     <th>Make</th>
                                     <th>Model</th>
@@ -106,15 +103,8 @@
                                 </tfoot>
                                 <tbody>
                                 @foreach($posts as $key=>$post)
-                                    <tr >
+                                    <tr>
                                         <td>{{ $key + 1 }}</td>
-                                        <td>
-                                            @if($post->status == true )
-                                                <span class="badge bg-blue">Approved</span>
-                                            @else
-                                                <span class="badge bg-pink">Pending</span>
-                                            @endif
-                                        </td>
                                         <td>{{$post->category}}</td>
                                         <td>{{$post->make}}</td>
                                         <td>{{$post->model}}</td>
@@ -154,22 +144,16 @@
                                         <td><img class="img-responsive thumbnail"
                                                  src="{{ url('storage/app/public/post/'.$post->image_5) }}"></td>
 
+
+
                                         <td class="text-center">
-                                            <a href="{{route('diller.diller.show',$post->id)}}" class="btn btn-info waves-effect">
+                                            <a href="{{route('admin.addpost.show',$post->id)}}" class="btn btn-info waves-effect">
                                                 <i class="material-icons">visibility</i>
                                             </a>
 
-                                            @if($post->status == false )
-                                                <a href="" class="btn btn-info waves-effect">
-                                                    <i class="material-icons">edit</i>
-                                                </a>
-                                            @else
-
-                                            @endif
-
-
-
-
+                                            <a href="" class="btn btn-info waves-effect">
+                                                <i class="material-icons">edit</i>
+                                            </a>
 
                                             <button class="btn btn-danger waves-effect" type="button" onclick="">
                                                 <i class="material-icons">delete</i>
@@ -179,9 +163,12 @@
                                                 @method('DELETE')
 
                                             </form>
+
                                         </td>
 
                                     </tr>
+
+
                                 @endforeach
                                 </tbody>
                             </table>
@@ -192,8 +179,6 @@
         </div>
         <!-- #END# Exportable Table -->
     </div>
-
-
 
 
 @endsection

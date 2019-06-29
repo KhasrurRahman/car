@@ -1,5 +1,5 @@
 @extends('layouts.backend.app')
-@section('title'.'dashbord')
+@section('title'.'Edit')
 @endsection
     @push('css')
     @endpush
@@ -11,32 +11,33 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            Post A Add
-                            <span class="badge bg-blue"></span>
+                           Edit Add
                         </h2>
 
                     </div>
-                <form action="{{route('admin.addpost.store')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('admin.addpost.update',$post->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
                         <label for="inputPassword" class="col-sm-4 col-form-label">Category</label>
                         <div class="col-sm-8 float-left d-flex">
+
                                 <select class="form-control show-tick" data-live-search="true" name="category">
-                                    <option value="car">car</option>
-                                    <option value="byke">byke</option>
-                                    <option value="track">track</option>
-                                    <option value="volvo">volvo</option>
+                                    <option value="car"  {{($post->category ==='car') ? 'selected' : ''}}>car</option>
+                                    <option value="byke"  {{($post->category ==='byke') ? 'selected' : ''}}>byke</option>
+                                    <option value="track" {{($post->category ==='track') ? 'selected' : ''}}>track</option>
+                                    <option value="volvo" {{($post->categorycategory ==='volvo') ? 'selected' : ''}}>volvo</option>
                                 </select>
+
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputPassword" class="col-sm-4 col-form-label">Make</label>
                         <div class="col-sm-8 float-left d-flex">
                             <select class="custom-select form-control" name="make">
-                                <option selected="">choose</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option selected="" disabled="">choose</option>
+                                <option value="1"{{($post->make ==='1') ? 'selected' : ''}}>One</option>
+                                <option value="2"{{($post->make ==='2') ? 'selected' : ''}}>Two</option>
+                                <option value="3"{{($post->make ==='3') ? 'selected' : ''}}>Three</option>
                             </select>
                         </div>
                     </div>
@@ -264,7 +265,7 @@
                                         <input type="checkbox" id="Crane" class="filled-in" name="attachment_parts[]" value="Crane">
                                         <label for="Crane">Crane</label>
 
-                                        <input type="checkbox" id="Trailer_coupling" class="filled-in" name="attachment_parts[]" value="Trailer coupling">
+                                        <input type="checkbox" id="Trailer_coupling" class="filled-in" name="attachment_parts[]" value="Trailer coupling" >
                                         <label for="Trailer_coupling">Trailer coupling</label>
 
                                         <input type="checkbox" id="Compressor" class="filled-in" name="attachment_parts[]" value="Compressor">
@@ -374,10 +375,10 @@
                     <button type="submit" class="btn btn-primary m-t-15 waves-effect">Save</button>
                 </form>
         </div>
-
-
-
             </div>
+
+
+
 @endsection
 @push('js')
 @endpush

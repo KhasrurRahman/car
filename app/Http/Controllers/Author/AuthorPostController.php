@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Diller;
+namespace App\Http\Controllers\Author;
 
 use App\post_add;
-use App\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -12,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
-class DillerController extends Controller
+class AuthorPostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +20,7 @@ class DillerController extends Controller
      */
     public function index()
     {
-
+        //
     }
 
     /**
@@ -31,14 +30,14 @@ class DillerController extends Controller
      */
     public function create()
     {
-        return view('diller.post_a_add');
+        return view('author.post_a_add');
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return Request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
@@ -75,6 +74,7 @@ class DillerController extends Controller
         $post->Other_features = implode(",",$request->other_features);
         $post->Further_information = $request->information;
         $post->status = 0;
+        $post->add_type = $request->add_type;
 
         $image_1 = $request->file('image_1');
         $image_2 = $request->file('image_2');
@@ -173,8 +173,9 @@ class DillerController extends Controller
         $post->image_5 = $imagename_5;
         $post->save();
 
+        $payment = $post->add_type;
         Toastr::success('Add successfully save,Waiting for The Admin approval','Success');
-        return redirect()->back();
+        return view('author.payment',compact('payment'));
     }
 
     /**
@@ -186,7 +187,7 @@ class DillerController extends Controller
     public function show($id)
     {
         $post = post_add::find($id);
-        return view('Diller.show',compact('post'));
+        return view('author.show',compact('post'));
     }
 
     /**
@@ -223,10 +224,11 @@ class DillerController extends Controller
         //
     }
 
+
     public function All_post()
     {
         $userid = Auth::id();
         $posts = post_add::where('user_id',$userid)->get();
-        return view('diller.all_add',compact('posts'));
+        return view('author.all_add',compact('posts'));
     }
 }

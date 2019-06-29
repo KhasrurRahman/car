@@ -35,32 +35,40 @@
     <div class="menu">
         <ul class="list">
             <li class="header">MAIN NAVIGATION</li>
+
             @if(Request::is('admin*'))
                 <li class="{{Request::is('admin/dashbord')?'active': ''}}">
                     <a href="{{route('admin.dashbord')}}">
                         <i class="material-icons">home</i>
-                        <span>Dashbord</span>
+                        <span>Profile</span>
                     </a>
                 </li>
 
                 <li class="{{Request::is('admin/addpos*')?'active': ''}}">
                     <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
                         <i class="material-icons">face</i>
-                        <span>Adds</span>
+                        <span>Advertise setting</span>
                     </a>
                     <ul class="ml-menu" style="display: none;">
                         <li>
-                            <a href="{{route('admin.addpost.index')}}" class=" waves-effect waves-block">All Adds
+                            <a href="{{route('admin.addpost.index')}}" class=" waves-effect waves-block">All advertise
                             </a>
                         </li>
 
                         <li>
-                            <a href="{{route('admin.addpost.create')}}" class=" waves-effect waves-block">Add New Adds
+                            <a href="{{route('admin.addpost.create')}}" class=" waves-effect waves-block">Post a new advertise
                             </a>
                         </li>
                     </ul>
                 </li>
 
+
+                <li class="{{Request::is('admin/pending_add*')?'active': ''}}">
+                    <a href="{{route('admin.pending_add')}}">
+                        <i class="material-icons">home</i>
+                        <span>Pending Add</span>
+                    </a>
+                </li>
 
                 <li class="{{Request::is('admin/dealer*')?'active': ''}}">
                     <a href="{{route('admin.dealer.index')}}">
@@ -83,24 +91,75 @@
                 <li class="{{Request::is('diller/dashbord')?'active': ''}}">
                     <a href="{{route('diller.dashbord')}}">
                         <i class="material-icons">home</i>
-                        <span>Dashbord</span>
+                        <span>Profile</span>
                     </a>
                 </li>
+
 
                 <li class="{{Request::is('diller/diller*')?'active': ''}}">
-                    <a href="{{route('diller.diller.index')}}">
+                    <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+                        <i class="material-icons">face</i>
+                        <span>Advertise setting</span>
+                    </a>
+                    <ul class="ml-menu" style="display: none;">
+                        <li>
+                            <a href="{{route('diller.All_post')}}" class=" waves-effect waves-block">All advertise
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('diller.diller.create')}}" class=" waves-effect waves-block">Post a new advertise
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="{{Request::is('diller/setting')?'active': ''}}">
+                    <a href="{{route('diller.setting')}}">
                         <i class="material-icons">home</i>
-                        <span>Place A Add</span>
+                        <span>Setting</span>
                     </a>
                 </li>
 
-                <li class="{{Request::is('diller/All_post*')?'active': ''}}">
-                    <a href="{{route('diller.All_post')}}">
+            @endif
+
+
+
+
+            @if(Request::is('author*'))
+                <li class="{{Request::is('author/dashbord')?'active': ''}}">
+                    <a href="{{route('diller.dashbord')}}">
                         <i class="material-icons">home</i>
-                        <span>All Your Post</span>
+                        <span>Profile</span>
                     </a>
                 </li>
 
+
+                <li class="{{Request::is('diller/diller*')?'active': ''}}">
+                    <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+                        <i class="material-icons">face</i>
+                        <span>Advertise setting</span>
+                    </a>
+                    <ul class="ml-menu" style="display: none;">
+                        <li>
+                            <a href="{{route('author.All_post')}}" class=" waves-effect waves-block">All advertise
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('author.post.create')}}" class=" waves-effect waves-block">Post a new advertise
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="{{Request::is('author/setting')?'active': ''}}">
+                    <a href="{{route('author.setting')}}">
+                        <i class="material-icons">home</i>
+                        <span>Setting</span>
+                    </a>
+                </li>
             @endif
 
 

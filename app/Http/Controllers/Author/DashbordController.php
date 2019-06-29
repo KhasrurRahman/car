@@ -8,6 +8,10 @@ use App\Http\Controllers\Controller;
 class DashbordController extends Controller
 {
     public function index(){
-        return view('author.home');
+        return view('Author.dashbord');
+    }
+
+    public function setting(){
+        return view('Author.setting');
     }
 }

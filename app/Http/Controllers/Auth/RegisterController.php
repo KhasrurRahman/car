@@ -94,6 +94,15 @@ class RegisterController extends Controller
             return $user;
         }
 
+        elseif ($data['role_id']==2){
+            return $user =  User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'role_id' => $data['role_id'],
+                'password' => Hash::make($data['password']),
+            ]);
+        }
+
 
 
     }
