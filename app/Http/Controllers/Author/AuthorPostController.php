@@ -30,7 +30,8 @@ class AuthorPostController extends Controller
      */
     public function create()
     {
-        return view('author.post_a_add');
+        $post = Auth::user()->post;
+        return view('author.post_a_add',compact('post'));
     }
 
     /**
@@ -41,6 +42,8 @@ class AuthorPostController extends Controller
      */
     public function store(Request $request)
     {
+        $post_count = Auth::user()->post;
+
         $post = new post_add();
         $post->user_id = Auth::id();
         $post->category = $request->category;
@@ -52,29 +55,28 @@ class AuthorPostController extends Controller
         $post->vehicle_no = $request->vehicle_NO;
         $post->vehicle = implode(",",$request->my_vehicle);
         $post->price =  $request->price;
-        $post->vat = $request->VAT_rate;
-        $post->Perm_gvw = $request->GVW;
-        $post->Admissible_haulage_weight = $request->Admissible_haulage_weight;
-        $post->Payload = $request->Payload;
-        $post->empty_weight = $request->Empty_weight;
-        $post->Gearing_type = $request->Gearing_type;
-        $post->brakes = $request->Brakes;
-        $post->suspension = $request->Suspension;
-        $post->axle_configuration = $request->Axle_configuration;
-        $post->wheels_distance = $request->wheels;
         $post->tyre_size = $request->Tyre_size;
-        $post->Fuel_consumption_combined = $request->Fuel_type;
-        $post->CO2_Emmision_combined = $request->co2_emmision;
-        $post->urban = $request->urban;
-        $post->rural = $request->rural;
-        $post->tuv_certified = $request->tuv;
         $post->Colour = $request->Colour;
-        $post->Cab =  $request->Cab;
-        $post->Attachment_parts = implode(",",$request->attachment_parts);
-        $post->Other_features = implode(",",$request->other_features);
         $post->Further_information = $request->information;
-        $post->status = 0;
-        $post->add_type = $request->add_type;
+        $post->status =0;
+
+        $date = date('Y-m-d');
+
+        if ($post_count->count()==0){
+            $post->expiry_date = date('Y-m-d', strtotime($date. ' + 90 days'));
+            $post->add_type =3;
+        }else{
+            if($request->add_type == 1){
+                $post->expiry_date = date('Y-m-d', strtotime($date. ' + 30 days'));
+                $post->add_type =1;
+            }elseif ($request->add_type == 2){
+                $post->expiry_date = date('Y-m-d', strtotime($date. ' + 30 days'));
+                $post->add_type =2;
+            }elseif ($request->add_type == 3){
+                $post->expiry_date = date('Y-m-d', strtotime($date. ' + 90 days'));
+                $post->add_type =3;
+            }
+        }
 
         $image_1 = $request->file('image_1');
         $image_2 = $request->file('image_2');
@@ -173,9 +175,15 @@ class AuthorPostController extends Controller
         $post->image_5 = $imagename_5;
         $post->save();
 
-        $payment = $post->add_type;
-        Toastr::success('Add successfully save,Waiting for The Admin approval','Success');
-        return view('author.payment',compact('payment'));
+if ($post_count->count()==0){
+    Toastr::success('Add successfully save for 90days,Waiting for The Admin approval','Success');
+    return redirect()->back();
+}else{
+    $payment = $post->add_type;
+    Toastr::success('Add successfully save,Waiting for The Admin approval.now you have to payment for publishing the add','Success');
+    return view('author.payment',compact('payment'));
+}
+
     }
 
     /**
@@ -230,5 +238,14 @@ class AuthorPostController extends Controller
         $userid = Auth::id();
         $posts = post_add::where('user_id',$userid)->get();
         return view('author.all_add',compact('posts'));
+    }
+
+    public function expiry_post()
+    {
+
+        $user = Auth::id();
+        $posts = post_add::where('user_id',$user)->whereRaw('expiry_date <=  curdate()')->get();
+        return view('author.expiry_post',compact('posts'));
+
     }
 }

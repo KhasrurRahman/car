@@ -54,27 +54,10 @@ class AddPostController extends Controller
         $post->vehicle_no = $request->vehicle_NO;
         $post->vehicle = implode(",",$request->my_vehicle);
         $post->price =  $request->price;
-        $post->vat = $request->VAT_rate;
-        $post->Perm_gvw = $request->GVW;
-        $post->Admissible_haulage_weight = $request->Admissible_haulage_weight;
-        $post->Payload = $request->Payload;
-        $post->empty_weight = $request->Empty_weight;
-        $post->Gearing_type = $request->Gearing_type;
-        $post->brakes = $request->Brakes;
-        $post->suspension = $request->Suspension;
-        $post->axle_configuration = $request->Axle_configuration;
-        $post->wheels_distance = $request->wheels;
         $post->tyre_size = $request->Tyre_size;
-        $post->Fuel_consumption_combined = $request->Fuel_type;
-        $post->CO2_Emmision_combined = $request->co2_emmision;
-        $post->urban = $request->urban;
-        $post->rural = $request->rural;
-        $post->tuv_certified = $request->tuv;
         $post->Colour = $request->Colour;
-        $post->Cab =  $request->Cab;
-        $post->Attachment_parts = implode(",",$request->attachment_parts);
-        $post->Other_features = implode(",",$request->other_features);
         $post->Further_information = $request->information;
+        $post->add_type = $request->add_type;
 
         $image_1 = $request->file('image_1');
         $image_2 = $request->file('image_2');
@@ -264,5 +247,12 @@ class AddPostController extends Controller
             Toastr::info('This post already approved');
         }
         return redirect()->back();
+    }
+
+    public function expiry_post()
+    {
+        $userid = Auth::id();
+        $posts = post_add::where('user_id', '!=' ,$userid)->whereRaw('expiry_date <=  curdate()')->get();
+        return view('admin.expiry_add.expiry_post',compact('posts'));
     }
 }

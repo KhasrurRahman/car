@@ -70,6 +70,13 @@
                     </a>
                 </li>
 
+                <li class="{{Request::is('admin/expiry_post*')?'active': ''}}">
+                    <a href="{{route('admin.expiry_post')}}">
+                        <i class="material-icons">home</i>
+                        <span>Expired Add</span>
+                    </a>
+                </li>
+
                 <li class="{{Request::is('admin/dealer*')?'active': ''}}">
                     <a href="{{route('admin.dealer.index')}}">
                         <i class="material-icons">home</i>
@@ -81,6 +88,20 @@
                     <a href="{{route('admin.customer.index')}}">
                         <i class="material-icons">home</i>
                         <span>All Customers</span>
+                    </a>
+                </li>
+
+                <li class="{{Request::is('admin/byke_diller*')?'active': ''}}">
+                    <a href="{{route('admin.byke_diller')}}">
+                        <i class="material-icons">home</i>
+                        <span>Byke Dealers</span>
+                    </a>
+                </li>
+
+                <li class="{{Request::is('admin/car_diller*')?'active': ''}}">
+                    <a href="{{route('admin.car_diller')}}">
+                        <i class="material-icons">home</i>
+                        <span>Car Dealers</span>
                     </a>
                 </li>
              @endif
@@ -114,6 +135,13 @@
                     </ul>
                 </li>
 
+
+                <li class="{{Request::is('diller/expiry_post')?'active': ''}}">
+                    <a href="{{route('diller.expiry_post')}}">
+                        <i class="material-icons">home</i>
+                        <span>Expired Add</span>
+                    </a>
+                </li>
 
                 <li class="{{Request::is('diller/setting')?'active': ''}}">
                     <a href="{{route('diller.setting')}}">
@@ -152,6 +180,13 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+
+                <li class="{{Request::is('author/expiry_post')?'active': ''}}">
+                    <a href="{{route('author.expiry_post')}}">
+                        <i class="material-icons">home</i>
+                        <span>Expired Add</span>
+                    </a>
                 </li>
 
                 <li class="{{Request::is('author/setting')?'active': ''}}">

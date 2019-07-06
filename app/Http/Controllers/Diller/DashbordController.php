@@ -10,4 +10,8 @@ class DashbordController extends Controller
     public function index(){
         return view('diller.dashbord');
     }
+
+    public function setting(){
+        return view('Diller.setting');
+    }
 }

@@ -259,7 +259,7 @@
             <div class="collapse navbar-collapse" id="mynav">
                 <ul class="navbar-nav nav nav-pills ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#vip">Dealers<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{route('diller')}}">Dealers<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="service.html"> service</a>

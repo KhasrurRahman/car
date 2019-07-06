@@ -73,6 +73,15 @@
                                         <input type="text" class="form-control" id="inputPassword" name="website">
                                     </div>
                                 </div>
+
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-4 col-form-label">Company Logo</label>
+                                    <div class="col-sm-8">
+                                        <input type="file"  name="logo">
+                                    </div>
+                                </div>
+
+
                                 <p>contact person</p>
 
                                 <div class="form-group row">
