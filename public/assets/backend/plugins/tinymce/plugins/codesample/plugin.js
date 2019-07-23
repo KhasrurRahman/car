@@ -842,7 +842,7 @@ Prism.languages.insertBefore('php', 'operator', {
 	}
 });
 
-// Add HTML support of the markup language exists
+// add HTML support of the markup language exists
 if (Prism.languages.markup) {
 
 	// Tokenize all inline PHP blocks that are wrapped in <?php ?>
@@ -891,7 +891,7 @@ if (Prism.languages.markup) {
 		}
 	});
 
-	// Add the rules before all others
+	// add the rules before all others
 	Prism.languages.insertBefore('php', 'comment', {
 		'markup': {
 			pattern: /<[^?]\/?(.*?)>/,

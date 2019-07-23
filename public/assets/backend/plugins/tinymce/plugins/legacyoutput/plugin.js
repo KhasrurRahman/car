@@ -74,12 +74,12 @@
 				schema.addValidElements(name + '[*]');
 			});
 
-			// Add font element if it's missing
+			// add font element if it's missing
 			if (!schema.getElementRule("font")) {
 				schema.addValidElements("font[face|size|color|style]");
 			}
 
-			// Add the missing and depreacted align attribute for the serialization engine
+			// add the missing and depreacted align attribute for the serialization engine
 			tinymce.each(alignElements.split(','), function(name) {
 				var rule = schema.getElementRule(name);
 

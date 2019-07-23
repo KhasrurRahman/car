@@ -95,7 +95,7 @@ class DealerController extends Controller
 
     public function single_diller_post($id){
             $posts = post_add::where('user_id',$id)->get();
-            return view('admin.Diller_type.single_diller_post',compact('posts'));
+            return view('admin.diller_type.single_diller_post',compact('posts'));
 
 
     }

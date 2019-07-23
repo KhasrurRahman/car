@@ -262,19 +262,16 @@
                         <a class="nav-link" href="{{route('diller')}}">Dealers<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="service.html"> service</a>
+                        <a class="nav-link" href="{{route('servise')}}"> service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="renta-car.html">Rent a car</a>
+                        <a class="nav-link" href="{{route('rent')}}">Rent a car</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#instruction">forum</a>
+                        <a class="nav-link" href="{{route('all_car')}}">All Advertise</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="E-store.html">E-Store</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact us</a>
+                        <a class="nav-link" href="{{route('contact')}}">Contact us</a>
                     </li>
                 </ul>
             </div>

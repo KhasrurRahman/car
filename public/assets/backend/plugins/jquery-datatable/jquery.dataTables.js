@@ -209,7 +209,7 @@
 		
 		
 		/**
-		 * Add a single new row or multiple rows of data to the table. Please note
+		 * add a single new row or multiple rows of data to the table. Please note
 		 * that this is suitable for client-side processing only - if you are using
 		 * server-side processing (i.e. "bServerSide": true), then to add data, you
 		 * must add it to the data source, i.e. the server-side, through an Ajax call.
@@ -1172,7 +1172,7 @@
 				aoColumnsInit = oInit.aoColumns;
 			}
 			
-			/* Add the columns */
+			/* add the columns */
 			for ( i=0, iLen=aoColumnsInit.length ; i<iLen ; i++ )
 			{
 				_fnAddColumn( oSettings, anThs ? anThs[i] : null );
@@ -1946,14 +1946,14 @@
 	}
 	
 	/**
-	 * Add a column to the list used for the table with default values
+	 * add a column to the list used for the table with default values
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {node} nTh The th element for this column
 	 *  @memberof DataTable#oApi
 	 */
 	function _fnAddColumn( oSettings, nTh )
 	{
-		// Add column to aoColumns array
+		// add column to aoColumns array
 		var oDefaults = DataTable.defaults.column;
 		var iCol = oSettings.aoColumns.length;
 		var oCol = $.extend( {}, DataTable.models.oColumn, oDefaults, {
@@ -1965,7 +1965,7 @@
 		} );
 		oSettings.aoColumns.push( oCol );
 	
-		// Add search object for column specific search. Note that the `searchCols[ iCol ]`
+		// add search object for column specific search. Note that the `searchCols[ iCol ]`
 		// passed into extend can be undefined. This allows the user to give a default
 		// with only some of the parameters defined, and also not give a default
 		var searchCols = oSettings.aoPreSearchCols;
@@ -2316,7 +2316,7 @@
 				{
 					if ( typeof aTargets[j] === 'number' && aTargets[j] >= 0 )
 					{
-						/* Add columns that we don't yet know about */
+						/* add columns that we don't yet know about */
 						while( columns.length <= aTargets[j] )
 						{
 							_fnAddColumn( oSettings );
@@ -2357,7 +2357,7 @@
 	}
 	
 	/**
-	 * Add a data array to the table, creating DOM node etc. This is the parallel to
+	 * add a data array to the table, creating DOM node etc. This is the parallel to
 	 * _fnGatherData, but for adding rows from a Javascript source, rather than a
 	 * DOM source.
 	 *  @param {object} oSettings dataTables settings object
@@ -2391,7 +2391,7 @@
 			columns[i].sType = null;
 		}
 	
-		/* Add to the display array */
+		/* add to the display array */
 		oSettings.aiDisplayMaster.push( iRow );
 	
 		var id = oSettings.rowIdFn( aDataIn );
@@ -2410,7 +2410,7 @@
 	
 	
 	/**
-	 * Add one or more TR elements to the table. Generally we'd expect to
+	 * add one or more TR elements to the table. Generally we'd expect to
 	 * use this for reading data from a DOM sourced table, but it could be
 	 * used for an TR element. Note that if a TR is given, it is used (i.e.
 	 * it is not cloned).
@@ -3097,7 +3097,7 @@
 					nTd.innerHTML = _fnGetCellData( oSettings, iRow, i, 'display' );
 				}
 	
-				/* Add user defined class */
+				/* add user defined class */
 				if ( oCol.sClass )
 				{
 					nTd.className += ' '+oCol.sClass;
@@ -3131,7 +3131,7 @@
 	
 	
 	/**
-	 * Add attributes to a row based on the special `DT_*` parameters in a data
+	 * add attributes to a row based on the special `DT_*` parameters in a data
 	 * source object.
 	 *  @param {object} settings DataTables settings object
 	 *  @param {object} DataTables row object for the row to be modified
@@ -3536,7 +3536,7 @@
 	
 	
 	/**
-	 * Add the options to the page HTML for the table
+	 * add the options to the page HTML for the table
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -3666,7 +3666,7 @@
 				}
 			}
 	
-			/* Add to the 2D features array */
+			/* add to the 2D features array */
 			if ( featureNode )
 			{
 				var aanFeatures = oSettings.aanFeatures;
@@ -4856,7 +4856,7 @@
 			plugin.fnInit( settings, node, redraw );
 		}
 	
-		/* Add a draw callback for the pagination on first instance, to update the paging display */
+		/* add a draw callback for the pagination on first instance, to update the paging display */
 		if ( ! features.p )
 		{
 			node.id = settings.sTableId+'_paginate';
@@ -5001,7 +5001,7 @@
 	}
 	
 	/**
-	 * Add any control elements for the table - specifically scrolling
+	 * add any control elements for the table - specifically scrolling
 	 *  @param {object} settings dataTables settings object
 	 *  @returns {node} Node to add to the DOM
 	 *  @memberof DataTable#oApi
@@ -5010,7 +5010,7 @@
 	{
 		var table = $(settings.nTable);
 	
-		// Add the ARIA grid role to the table
+		// add the ARIA grid role to the table
 		table.attr( 'role', 'grid' );
 	
 		// Scrolling from here on in
@@ -6203,7 +6203,7 @@
 					.removeClass( sortClass + (i<2 ? i+1 : 3) );
 			}
 	
-			// Add new column sorting
+			// add new column sorting
 			for ( i=0, ien=sort.length ; i<ien ; i++ ) {
 				colIdx = sort[i].src;
 	
@@ -7769,7 +7769,7 @@
 						return $.inArray( el, displayFiltered ) === -1 ? el : null;
 					} );
 		}
-		else if ( order == 'index' || order == 'original' ) {
+		else if ( order == 'index.blade.php' || order == 'original' ) {
 			for ( i=0, ien=settings.aoData.length ; i<ien ; i++ ) {
 				if ( search == 'none' ) {
 					a.push( i );
@@ -9169,7 +9169,7 @@
 		_api_register( key+'()', function ( /* event, handler */ ) {
 			var args = Array.prototype.slice.call(arguments);
 	
-			// Add the `dt` namespace automatically if it isn't already present
+			// add the `dt` namespace automatically if it isn't already present
 			if ( ! args[0].match(/\.dt\b/) ) {
 				args[0] += '.dt';
 			}
@@ -9270,7 +9270,7 @@
 				} );
 			}
 	
-			// Add the TR elements back into the table in their original order
+			// add the TR elements back into the table in their original order
 			jqTbody.children().detach();
 			jqTbody.append( rows );
 	
@@ -9311,7 +9311,7 @@
 	} );
 	
 	
-	// Add the `every()` method for rows, columns and cells in a compact form
+	// add the `every()` method for rows, columns and cells in a compact form
 	$.each( [ 'column', 'row', 'cell' ], function ( i, type ) {
 		_api_register( type+'s().every()', function ( fn ) {
 			var opts = this.selector.opts;
@@ -10036,7 +10036,7 @@
 		 *   } );
 		 *
 		 * @example
-		 *   // Add data to the request
+		 *   // add data to the request
 		 *   $('#example').dataTable( {
 		 *     "ajax": {
 		 *       "url": "data.json",
@@ -14724,7 +14724,7 @@
 	};
 	
 	
-	// Add the numeric 'deformatting' functions for sorting and search. This is done
+	// add the numeric 'deformatting' functions for sorting and search. This is done
 	// in a function to provide an easy ability for the language options to add
 	// additional methods if a non-period decimal place is used.
 	function _addNumericSort ( decimalPlace ) {
@@ -14751,7 +14751,7 @@
 				}
 			},
 			function ( key, fn ) {
-				// Add the ordering method
+				// add the ordering method
 				_ext.type.order[ key+decimalPlace+'-pre' ] = fn;
 	
 				// For HTML types add a search formatter that will strip the HTML

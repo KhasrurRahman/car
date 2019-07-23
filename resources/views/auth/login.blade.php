@@ -1,15 +1,8 @@
 @extends('layouts.fontend.app')
-@section('title','login')
+@section('title','Contact')
 @push('css')
-    <link href="{{asset('assets/fontend/auth/responsive.css')}}" rel="stylesheet">
-
-    <link href="{{asset('assets/fontend/auth/styles.css')}}" rel="stylesheet">
 @endpush
-
 @section('content')
-    <div class="slider display-table center-text">
-        <h1 class="title display-table-cell"><b>Login</b></h1>
-    </div><!-- slider -->
 
     <section class="blog-area section">
         <div class="container">
@@ -85,6 +78,6 @@
 
 @endsection
 
-
 @push('js')
+
 @endpush

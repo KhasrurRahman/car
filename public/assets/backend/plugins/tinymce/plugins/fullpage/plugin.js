@@ -26,7 +26,7 @@ tinymce.PluginManager.add('fullpage', function(editor) {
 				{name: 'keywords', label: 'Keywords'},
 				{name: 'description', label: 'Description'},
 				{name: 'robots', label: 'Robots'},
-				{name: 'author', label: 'Author'},
+				{name: 'author', label: 'author'},
 				{name: 'docencoding', label: 'Encoding'}
 			],
 			onSubmit: function(e) {
@@ -140,7 +140,7 @@ tinymce.PluginManager.add('fullpage', function(editor) {
 			}
 		}
 
-		// Add/update/remove XML-PI
+		// add/update/remove XML-PI
 		elm = headerFragment.firstChild;
 		if (data.xml_pi) {
 			value = 'version="1.0"';
@@ -159,7 +159,7 @@ tinymce.PluginManager.add('fullpage', function(editor) {
 			elm.remove();
 		}
 
-		// Add/update/remove doctype
+		// add/update/remove doctype
 		elm = headerFragment.getAll('#doctype')[0];
 		if (data.doctype) {
 			if (!elm) {
@@ -177,7 +177,7 @@ tinymce.PluginManager.add('fullpage', function(editor) {
 			elm.remove();
 		}
 
-		// Add meta encoding
+		// add meta encoding
 		elm = null;
 		each(headerFragment.getAll('meta'), function(meta) {
 			if (meta.attr('http-equiv') == 'Content-Type') {
@@ -198,7 +198,7 @@ tinymce.PluginManager.add('fullpage', function(editor) {
 			elm.remove();
 		}
 
-		// Add/update/remove title
+		// add/update/remove title
 		elm = headerFragment.getAll('title')[0];
 		if (data.title) {
 			if (!elm) {
@@ -213,7 +213,7 @@ tinymce.PluginManager.add('fullpage', function(editor) {
 			elm.remove();
 		}
 
-		// Add/update/remove meta
+		// add/update/remove meta
 		each('keywords,description,author,copyright,robots'.split(','), function(name) {
 			var nodes = headerFragment.getAll('meta'), i, meta, value = data[name];
 
@@ -248,7 +248,7 @@ tinymce.PluginManager.add('fullpage', function(editor) {
 			}
 		});
 
-		// Add new
+		// add new
 		tinymce.each(data.stylesheets, function(stylesheet) {
 			if (!currentStyleSheetsMap[stylesheet]) {
 				elm = new Node('link', 1);
@@ -409,7 +409,7 @@ tinymce.PluginManager.add('fullpage', function(editor) {
 			}
 		});
 
-		// Add new
+		// add new
 		tinymce.each(headerFragment.getAll('link'), function(stylesheet) {
 			var href = stylesheet.attr('href');
 

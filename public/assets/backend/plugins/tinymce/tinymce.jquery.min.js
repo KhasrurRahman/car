@@ -1022,7 +1022,7 @@ define("tinymce/dom/EventUtils", [
 				(doc && doc.clientTop || body && body.clientTop || 0);
 		}
 
-		// Add preventDefault method
+		// add preventDefault method
 		event.preventDefault = function() {
 			event.isDefaultPrevented = returnTrue;
 
@@ -1036,7 +1036,7 @@ define("tinymce/dom/EventUtils", [
 			}
 		};
 
-		// Add stopPropagation
+		// add stopPropagation
 		event.stopPropagation = function() {
 			event.isPropagationStopped = returnTrue;
 
@@ -1050,20 +1050,20 @@ define("tinymce/dom/EventUtils", [
 			}
 		};
 
-		// Add stopImmediatePropagation
+		// add stopImmediatePropagation
 		event.stopImmediatePropagation = function() {
 			event.isImmediatePropagationStopped = returnTrue;
 			event.stopPropagation();
 		};
 
-		// Add event delegation states
+		// add event delegation states
 		if (!event.isDefaultPrevented) {
 			event.isDefaultPrevented = returnFalse;
 			event.isPropagationStopped = returnFalse;
 			event.isImmediatePropagationStopped = returnFalse;
 		}
 
-		// Add missing metaKey for IE 8
+		// add missing metaKey for IE 8
 		if (typeof event.metaKey == 'undefined') {
 			event.metaKey = false;
 		}
@@ -1284,7 +1284,7 @@ define("tinymce/dom/EventUtils", [
 					callbackList.capture = capture;
 					//callbackList.callback = callback;
 
-					// Add the nativeHandler to the callback list so that we can later unbind it
+					// add the nativeHandler to the callback list so that we can later unbind it
 					callbackList.nativeHandler = nativeHandler;
 
 					// Check if the target has native events support
@@ -2943,7 +2943,7 @@ Expr = Sizzle.selectors = {
 
 Expr.pseudos["nth"] = Expr.pseudos["eq"];
 
-// Add button/input type pseudos
+// add button/input type pseudos
 for ( i in { radio: true, checkbox: true, file: true, password: true, image: true } ) {
 	Expr.pseudos[ i ] = createInputPseudo( i );
 }
@@ -3207,7 +3207,7 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 				}
 			}
 
-		// Add elements to results, through postFinder if defined
+		// add elements to results, through postFinder if defined
 		} else {
 			matcherOut = condense(
 				matcherOut === results ?
@@ -3298,7 +3298,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 				outermostContext = context !== document && context;
 			}
 
-			// Add elements passing elementMatchers directly to results
+			// add elements passing elementMatchers directly to results
 			// Keep `i` a string if there are no elements so `matchedCount` will be "00" below
 			// Support: IE<9, Safari
 			// Tolerate NodeList properties (IE: "length"; Safari: <number>) matching elements by id
@@ -3352,7 +3352,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 					setMatched = condense( setMatched );
 				}
 
-				// Add matches to results
+				// add matches to results
 				push.apply( results, setMatched );
 
 				// Seedless set matches succeeding multiple successful matchers stipulate sorting
@@ -3873,7 +3873,7 @@ define("tinymce/util/Tools", [
 			de = 1;
 		}
 
-		// Add constructor and methods
+		// add constructor and methods
 		ns[cn] = p[cn];
 		self.extend(ns[cn].prototype, p);
 
@@ -3885,12 +3885,12 @@ define("tinymce/util/Tools", [
 			// Extend constructor
 			c = ns[cn];
 			if (de) {
-				// Add passthrough constructor
+				// add passthrough constructor
 				ns[cn] = function() {
 					return sp[scn].apply(this, arguments);
 				};
 			} else {
-				// Add inherit constructor
+				// add inherit constructor
 				ns[cn] = function() {
 					this.parent = sp[scn];
 					return c.apply(this, arguments);
@@ -3898,12 +3898,12 @@ define("tinymce/util/Tools", [
 			}
 			ns[cn].prototype[cn] = ns[cn];
 
-			// Add super methods
+			// add super methods
 			self.each(sp, function(f, n) {
 				ns[cn].prototype[n] = sp[n];
 			});
 
-			// Add overridden methods
+			// add overridden methods
 			self.each(p, function(f, n) {
 				// Extend methods if needed
 				if (sp[n]) {
@@ -3919,7 +3919,7 @@ define("tinymce/util/Tools", [
 			});
 		}
 
-		// Add static methods
+		// add static methods
 		/*jshint sub:true*/
 		/*eslint dot-notation:0*/
 		self.each(p['static'], function(f, n) {
@@ -3984,7 +3984,7 @@ define("tinymce/util/Tools", [
 	 * // Create some namespace
 	 * tinymce.createNS('tinymce.somepackage.subpackage');
 	 *
-	 * // Add a singleton
+	 * // add a singleton
 	 * var tinymce.somepackage.subpackage.SomeSingleton = {
 	 *     method: function() {
 	 *         // Some method
@@ -7502,10 +7502,10 @@ define("tinymce/dom/StyleSheetLoader", [
  *
  * @class tinymce.dom.DOMUtils
  * @example
- * // Add a class to an element by id in the page
+ * // add a class to an element by id in the page
  * tinymce.DOM.addClass('someid', 'someclass');
  *
- * // Add a class to an element by id inside the editor
+ * // add a class to an element by id inside the editor
  * tinymce.activeEditor.dom.addClass('someid', 'someclass');
  */
 define("tinymce/dom/DOMUtils", [
@@ -7685,7 +7685,7 @@ define("tinymce/dom/DOMUtils", [
 			var settings = this.settings, name;
 
 			if (isIE && settings.schema) {
-				// Add missing HTML 4/5 elements to IE
+				// add missing HTML 4/5 elements to IE
 				('abbr article aside audio canvas ' +
 				'details figcaption figure footer ' +
 				'header hgroup mark menu meter nav ' +
@@ -7704,7 +7704,7 @@ define("tinymce/dom/DOMUtils", [
 		clone: function(node, deep) {
 			var self = this, clone, doc;
 
-			// TODO: Add feature detection here in the future
+			// TODO: add feature detection here in the future
 			if (!isIE || node.nodeType !== 1 || deep) {
 				return node.cloneNode(deep);
 			}
@@ -8351,7 +8351,7 @@ define("tinymce/dom/DOMUtils", [
 					pos = elm.getBoundingClientRect();
 					rootElm = self.boxModel ? doc.documentElement : body;
 
-					// Add scroll offsets from documentElement or body since IE with the wrong box model will use d.body and so do WebKit
+					// add scroll offsets from documentElement or body since IE with the wrong box model will use d.body and so do WebKit
 					// Also remove the body/documentelement clientTop/clientLeft on IE 6, 7 since they offset the position
 					x = pos.left + (doc.documentElement.scrollLeft || body.scrollLeft) - rootElm.clientLeft;
 					y = pos.top + (doc.documentElement.scrollTop || body.scrollTop) - rootElm.clientTop;
@@ -9452,10 +9452,10 @@ define("tinymce/dom/ScriptLoader", [
 				elm.onload = done;
 			}
 
-			// Add onerror event will get fired on some browsers but not all of them
+			// add onerror event will get fired on some browsers but not all of them
 			elm.onerror = error;
 
-			// Add script to document
+			// add script to document
 			(document.getElementsByTagName('head')[0] || document.body).appendChild(elm);
 		}
 
@@ -9492,7 +9492,7 @@ define("tinymce/dom/ScriptLoader", [
 		this.add = this.load = function(url, callback, scope) {
 			var state = states[url];
 
-			// Add url to load queue
+			// add url to load queue
 			if (state == undef) {
 				queue.push(url);
 				states[url] = QUEUED;
@@ -9639,7 +9639,7 @@ define("tinymce/AddOnManager", [
 		 * Returns the specified add on by the short name.
 		 *
 		 * @method get
-		 * @param {String} name Add-on to look for.
+		 * @param {String} name add-on to look for.
 		 * @return {tinymce.Theme/tinymce.Plugin} Theme or plugin add-on instance or undefined.
 		 */
 		get: function(name) {
@@ -9733,7 +9733,7 @@ define("tinymce/AddOnManager", [
 		},
 
 		/**
-		 * Add a set of components that will make up the add-on. Using the url of the add-on name as the base url.
+		 * add a set of components that will make up the add-on. Using the url of the add-on name as the base url.
 		 * This should be used in development mode.  A new compressor/javascript munger process will ensure that the
 		 * components are put together into the plugin.js file and compressed correctly.
 		 *
@@ -9836,7 +9836,7 @@ define("tinymce/AddOnManager", [
  * @class tinymce.Plugin
  * @example
  * tinymce.PluginManager.add('example', function(editor, url) {
- *     // Add a button that opens a window
+ *     // add a button that opens a window
  *     editor.addButton('example', {
  *         text: 'My button',
  *         icon: false,
@@ -11466,7 +11466,7 @@ define("tinymce/html/Node", [], function() {
 		// Create node
 		node = new Node(name, typeLookup[name] || 1);
 
-		// Add attributes if needed
+		// add attributes if needed
 		if (attrs) {
 			for (attrName in attrs) {
 				node.attr(attrName, attrs[attrName]);
@@ -11611,7 +11611,7 @@ define("tinymce/html/Schema", [
 			"textarea u var #text #comment"
 		);
 
-		// Add HTML5 items to globalAttributes, blockContent, phrasingContent
+		// add HTML5 items to globalAttributes, blockContent, phrasingContent
 		if (type != "html4") {
 			globalAttributes.push.apply(globalAttributes, split("contenteditable contextmenu draggable dropzone " +
 				"hidden spellcheck translate"));
@@ -11620,7 +11620,7 @@ define("tinymce/html/Schema", [
 				"progress time wbr video ruby bdi keygen"));
 		}
 
-		// Add HTML4 elements unless it's html5-strict
+		// add HTML4 elements unless it's html5-strict
 		if (type != "html5-strict") {
 			globalAttributes.push("xml:lang");
 
@@ -12011,7 +12011,7 @@ define("tinymce/html/Schema", [
 										attr.pattern = patternToRegExp(attrName);
 										element.attributePatterns.push(attr);
 									} else {
-										// Add attribute to order list if it doesn't already exist
+										// add attribute to order list if it doesn't already exist
 										if (!attributes[attrName]) {
 											attributesOrder.push(attrName);
 										}
@@ -12034,7 +12034,7 @@ define("tinymce/html/Schema", [
 							elements[outputName] = element;
 						}
 
-						// Add pattern or exact element
+						// add pattern or exact element
 						if (hasPatternsRegExp.test(elementName)) {
 							element.pattern = patternToRegExp(elementName);
 							patternElements.push(element);
@@ -12080,7 +12080,7 @@ define("tinymce/html/Schema", [
 						blockElementsMap[name] = {};
 					}
 
-					// Add elements clone if needed
+					// add elements clone if needed
 					if (!elements[name]) {
 						var customRule = elements[cloneName];
 
@@ -12091,7 +12091,7 @@ define("tinymce/html/Schema", [
 						elements[name] = customRule;
 					}
 
-					// Add custom elements at span/div positions
+					// add custom elements at span/div positions
 					each(children, function(element, elmName) {
 						if (element[cloneName]) {
 							children[elmName] = element = extend({}, children[elmName]);
@@ -12116,7 +12116,7 @@ define("tinymce/html/Schema", [
 					if (matches) {
 						prefix = matches[1];
 
-						// Add/remove items from default
+						// add/remove items from default
 						if (prefix) {
 							parent = children[matches[2]];
 						} else {
@@ -12175,7 +12175,7 @@ define("tinymce/html/Schema", [
 				});
 			}
 
-			// Add default alt attribute for images, removed since alt="" is treated as presentational.
+			// add default alt attribute for images, removed since alt="" is treated as presentational.
 			// elements.img.attributesDefault = [{name: 'alt', value: ''}];
 
 			// Remove these if they are empty by default
@@ -12606,7 +12606,7 @@ define("tinymce/html/SaxParser", [
 			settings.fix_self_closing = true;
 		}
 
-		// Add handler functions from settings and setup default handlers
+		// add handler functions from settings and setup default handlers
 		each('comment cdata text start end pi doctype'.split(' '), function(name) {
 			if (name) {
 				self[name] = settings[name] || noop;
@@ -12715,7 +12715,7 @@ define("tinymce/html/SaxParser", [
 					}
 				}
 
-				// Add attribute to list and map
+				// add attribute to list and map
 				attrList.map[name] = value;
 				attrList.push({
 					name: name,
@@ -14548,7 +14548,7 @@ define("tinymce/dom/Serializer", [
 					// Create an empty HTML document
 					doc = impl.createHTMLDocument("");
 
-					// Add the element or it's children if it's a body element to the new document
+					// add the element or it's children if it's a body element to the new document
 					each(node.nodeName == 'BODY' ? node.childNodes : [node], function(node) {
 						doc.body.appendChild(doc.importNode(node, true));
 					});
@@ -15272,7 +15272,7 @@ define("tinymce/dom/ControlSelection", [
 			sw: [0, 1, -1, 1]
 		};
 
-		// Add CSS for resize handles, cloned element and selected
+		// add CSS for resize handles, cloned element and selected
 		var rootClass = '.mce-content-body';
 		editor.contentStyles.push(
 			rootClass + ' div.mce-resizehandle {' +
@@ -18233,7 +18233,7 @@ define("tinymce/dom/Selection", [
 				});
 			}
 
-			// Add selector listeners
+			// add selector listeners
 			if (!self.selectorChangedData[selector]) {
 				self.selectorChangedData[selector] = [];
 			}
@@ -18558,7 +18558,7 @@ define("tinymce/fmt/Preview", [
 		name = format.block || format.inline || 'span';
 		previewElm = dom.create(name);
 
-		// Add format styles to preview element
+		// add format styles to preview element
 		each(format.styles, function(value, name) {
 			value = removeVars(value);
 
@@ -18567,7 +18567,7 @@ define("tinymce/fmt/Preview", [
 			}
 		});
 
-		// Add attributes to preview element
+		// add attributes to preview element
 		each(format.attributes, function(value, name) {
 			value = removeVars(value);
 
@@ -18576,7 +18576,7 @@ define("tinymce/fmt/Preview", [
 			}
 		});
 
-		// Add classes to preview element
+		// add classes to preview element
 		each(format.classes, function(value) {
 			value = removeVars(value);
 
@@ -18587,7 +18587,7 @@ define("tinymce/fmt/Preview", [
 
 		editor.fire('PreviewFormats');
 
-		// Add the previewElm outside the visual area
+		// add the previewElm outside the visual area
 		dom.setStyles(previewElm, {position: 'absolute', left: -0xFFFF});
 		editor.getBody().appendChild(previewElm);
 
@@ -18943,7 +18943,7 @@ define("tinymce/Formatter", [
 		}
 
 		function addKeyboardShortcuts() {
-			// Add some inline shortcuts
+			// add some inline shortcuts
 			ed.addShortcut('meta+b', 'bold_desc', 'Bold');
 			ed.addShortcut('meta+i', 'italic_desc', 'Italic');
 			ed.addShortcut('meta+u', 'underline_desc', 'Underline');
@@ -19971,7 +19971,7 @@ define("tinymce/Formatter", [
 				});
 			}
 
-			// Add format listeners
+			// add format listeners
 			each(formats.split(','), function(format) {
 				if (!formatChangeData[format]) {
 					formatChangeData[format] = [];
@@ -21193,7 +21193,7 @@ define("tinymce/UndoManager", [
 			self.add({}, e);
 		}
 
-		// Add initial undo level when the editor is initialized
+		// add initial undo level when the editor is initialized
 		editor.on('init', function() {
 			self.add();
 		});
@@ -21207,7 +21207,7 @@ define("tinymce/UndoManager", [
 			}
 		});
 
-		// Add undo level after an execCommand call was made
+		// add undo level after an execCommand call was made
 		editor.on('ExecCommand', function(e) {
 			var cmd = e.command;
 
@@ -21293,7 +21293,7 @@ define("tinymce/UndoManager", [
 			}
 		});
 
-		// Add keyboard shortcuts for undo/redo keys
+		// add keyboard shortcuts for undo/redo keys
 		editor.addShortcut('meta+z', '', 'Undo');
 		editor.addShortcut('meta+y,meta+shift+z', '', 'Redo');
 
@@ -21351,7 +21351,7 @@ define("tinymce/UndoManager", [
 					return null;
 				}
 
-				// Add undo level if needed
+				// add undo level if needed
 				if (lastLevel && lastLevel.content == level.content) {
 					return null;
 				}
@@ -23308,7 +23308,7 @@ define("tinymce/InsertContent", [
 		editor.fire('BeforeSetContent', args);
 		value = args.content;
 
-		// Add caret at end of contents if it's missing
+		// add caret at end of contents if it's missing
 		if (value.indexOf('{$caret}') == -1) {
 			value += '{$caret}';
 		}
@@ -23740,12 +23740,12 @@ define("tinymce/EditorCommands", [
 			selection.moveToBookmark(bookmark);
 		}
 
-		// Add execCommand overrides
+		// add execCommand overrides
 		addCommands({
 			// Ignore these, added for compatibility
 			'mceResetDesignMode,mceBeginUndoLevel': function() {},
 
-			// Add undo manager logic
+			// add undo manager logic
 			'mceEndUndoLevel,mceAddUndoLevel': function() {
 				editor.undoManager.add();
 			},
@@ -24141,7 +24141,7 @@ define("tinymce/EditorCommands", [
 			}
 		});
 
-		// Add queryCommandState overrides
+		// add queryCommandState overrides
 		addCommands({
 			// Override justify commands
 			'JustifyLeft,JustifyCenter,JustifyRight,JustifyFull': function(command) {
@@ -24192,7 +24192,7 @@ define("tinymce/EditorCommands", [
 			}
 		}, 'state');
 
-		// Add queryCommandValue overrides
+		// add queryCommandValue overrides
 		addCommands({
 			'FontSize,FontName': function(command) {
 				var value = 0, parent;
@@ -24209,7 +24209,7 @@ define("tinymce/EditorCommands", [
 			}
 		}, 'value');
 
-		// Add undo manager logic
+		// add undo manager logic
 		addCommands({
 			Undo: function() {
 				editor.undoManager.undo();
@@ -24391,12 +24391,12 @@ define("tinymce/util/URI", [
 
 			output = self.toRelPath(self.path, uri.path);
 
-			// Add query
+			// add query
 			if (uri.query) {
 				output += '?' + uri.query;
 			}
 
-			// Add anchor
+			// add anchor
 			if (uri.anchor) {
 				output += '#' + uri.anchor;
 			}
@@ -24552,12 +24552,12 @@ define("tinymce/util/URI", [
 				outPath = base.slice(0, i).join('/') + '/' + o.reverse().join('/');
 			}
 
-			// Add front / if it's needed
+			// add front / if it's needed
 			if (outPath.indexOf('/') !== 0) {
 				outPath = '/' + outPath;
 			}
 
-			// Add traling / if it's needed
+			// add traling / if it's needed
 			if (tr && outPath.lastIndexOf('/') !== outPath.length - 1) {
 				outPath += tr;
 			}
@@ -24746,7 +24746,7 @@ define("tinymce/util/Class", [
 		prototype = new self();
 		initializing = false;
 
-		// Add mixins
+		// add mixins
 		if (prop.Mixins) {
 			each(prop.Mixins, function(mixin) {
 				for (var name in mixin) {
@@ -24898,24 +24898,24 @@ define("tinymce/util/EventDispatcher", [
 				args.target = scope;
 			}
 
-			// Add event delegation methods if they are missing
+			// add event delegation methods if they are missing
 			if (!args.preventDefault) {
-				// Add preventDefault method
+				// add preventDefault method
 				args.preventDefault = function() {
 					args.isDefaultPrevented = returnTrue;
 				};
 
-				// Add stopPropagation
+				// add stopPropagation
 				args.stopPropagation = function() {
 					args.isPropagationStopped = returnTrue;
 				};
 
-				// Add stopImmediatePropagation
+				// add stopImmediatePropagation
 				args.stopImmediatePropagation = function() {
 					args.isImmediatePropagationStopped = returnTrue;
 				};
 
-				// Add event delegation states
+				// add event delegation states
 				args.isDefaultPrevented = returnFalse;
 				args.isPropagationStopped = returnFalse;
 				args.isImmediatePropagationStopped = returnFalse;
@@ -27378,7 +27378,7 @@ define("tinymce/ui/Control", [
 		parents: function(selector) {
 			var self = this, ctrl, parents = new Collection();
 
-			// Add each parent to collection
+			// add each parent to collection
 			for (ctrl = self.parent(); ctrl; ctrl = ctrl.parent()) {
 				parents.add(ctrl);
 			}
@@ -27729,7 +27729,7 @@ define("tinymce/ui/Control", [
 				});
 			}
 
-			// Add instance to lookup
+			// add instance to lookup
 			var root = self.getRoot();
 			if (!root.controlIdLookup) {
 				root.controlIdLookup = {};
@@ -28860,7 +28860,7 @@ define("tinymce/ui/Container", [
 				items = [items];
 			}
 
-			// Add default type to each child control
+			// add default type to each child control
 			Tools.each(items, function(item) {
 				if (item) {
 					// Construct item if needed
@@ -32016,7 +32016,7 @@ define("tinymce/util/Quirks", [
 			var doc = editor.getDoc(), dom = editor.dom, selection = editor.selection;
 			var MutationObserver = window.MutationObserver, olderWebKit, dragStartRng;
 
-			// Add mini polyfill for older WebKits
+			// add mini polyfill for older WebKits
 			// TODO: Remove this when old Safari versions gets updated
 			if (!MutationObserver) {
 				olderWebKit = true;
@@ -32911,7 +32911,7 @@ define("tinymce/util/Quirks", [
 					while (j--) {
 						brElm = brNodes[j];
 
-						// Add \n before BR in PRE elements on older IE:s so the new lines get rendered
+						// add \n before BR in PRE elements on older IE:s so the new lines get rendered
 						sibling = brElm.prev;
 						if (sibling && sibling.type === 3 && sibling.value.charAt(sibling.value - 1) != '\n') {
 							sibling.value += '\n';
@@ -32974,7 +32974,7 @@ define("tinymce/util/Quirks", [
 		 * <p>|x</p>
 		 */
 		function removeBlockQuoteOnBackSpace() {
-			// Add block quote deletion handler
+			// add block quote deletion handler
 			editor.on('keydown', function(e) {
 				var rng, container, offset, root, parent;
 
@@ -36828,7 +36828,7 @@ define("tinymce/util/Uuid", [
  * @class tinymce.Editor
  * @mixes tinymce.util.Observable
  * @example
- * // Add a class to all paragraphs in the editor.
+ * // add a class to all paragraphs in the editor.
  * tinymce.activeEditor.dom.addClass(tinymce.activeEditor.dom.select('p'), 'someclass');
  *
  * // Gets the current editors selection as text
@@ -37131,7 +37131,7 @@ define("tinymce/Editor", [
 			if (form) {
 				self.formElement = form;
 
-				// Add hidden input for non input elements inside form elements
+				// add hidden input for non input elements inside form elements
 				if (settings.hidden_input && !/TEXTAREA|INPUT/i.test(self.getElement().nodeName)) {
 					DOM.insertAfter(DOM.create('input', {type: 'hidden', name: id}), id);
 					self.hasHiddenInput = true;
@@ -37659,7 +37659,7 @@ define("tinymce/Editor", [
 					value = node.attr(name);
 					internalName = 'data-mce-' + name;
 
-					// Add internal attribute if we need to we don't on a refresh of the document
+					// add internal attribute if we need to we don't on a refresh of the document
 					if (!node.attributes.map[internalName]) {
 						// Don't duplicate these since they won't get modified by any browser
 						if (value.indexOf('data:') === 0 || value.indexOf('blob:') === 0) {
@@ -37837,7 +37837,7 @@ define("tinymce/Editor", [
 				self.composing = e.type === 'compositionstart';
 			});
 
-			// Add editor specific CSS styles
+			// add editor specific CSS styles
 			if (self.contentStyles.length > 0) {
 				contentCssText = '';
 
@@ -39914,7 +39914,7 @@ define("tinymce/EditorManager", [
 		add: function(editor) {
 			var self = this, editors = self.editors;
 
-			// Add named and index editor instance
+			// add named and index editor instance
 			editors[editor.id] = editor;
 			editors.push(editor);
 
@@ -40260,7 +40260,7 @@ define("tinymce/LegacyInput", [
  *    }
  * });
  *
- * // Add custom header to XHR request
+ * // add custom header to XHR request
  * tinymce.util.XHR.on('beforeSend', function(e) {
  *     e.xhr.setRequestHeader('X-Requested-With', 'Something');
  * });

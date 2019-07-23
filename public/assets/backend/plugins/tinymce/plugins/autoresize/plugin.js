@@ -123,7 +123,7 @@ tinymce.PluginManager.add('autoresize', function(editor) {
 	// Define maximum height
 	settings.autoresize_max_height = parseInt(editor.getParam('autoresize_max_height', 0), 10);
 
-	// Add padding at the bottom for better UX
+	// add padding at the bottom for better UX
 	editor.on("init", function() {
 		var overflowPadding, bottomMargin;
 
@@ -144,7 +144,7 @@ tinymce.PluginManager.add('autoresize', function(editor) {
 		}
 	});
 
-	// Add appropriate listeners for resizing content area
+	// add appropriate listeners for resizing content area
 	editor.on("nodechange setcontent keyup FullscreenStateChanged", resize);
 
 	if (editor.getParam('autoresize_on_init', true)) {

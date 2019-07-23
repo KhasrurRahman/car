@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\post_add;
+use App\rentACar;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -33,6 +34,11 @@ class HomeController extends Controller
         return view('welcome',compact('top','vip','ordinary'));
     }
 
+
+    public function contact(){
+        return view('contact');
+    }
+
     public function single_add_view($id)
     {
 
@@ -43,13 +49,13 @@ class HomeController extends Controller
 
     public function dealerRegistration()
     {
-        return view('Diller.dealer_registration');
+        return view('diller.dealer_registration');
     }
 
 
     public function dillerLogin()
     {
-        return view('Diller.login');
+        return view('diller.login');
     }
 
     public function diller()
@@ -87,6 +93,24 @@ class HomeController extends Controller
         ])->whereRaw('expiry_date <=  curdate()')->orderBy('add_type')->get();
 
         return view('search',compact('post'));
+    }
+
+    public function rent(){
+        $posts = rentACar::all();
+        return view('rent.index',compact('posts'));
+    }
+
+    public function rent_show($id){
+        $post = rentACar::find($id);
+        return view('rent.show',compact('post'));
+    }
+    public function servise(){
+        return view('servise');
+    }
+
+    public function all_car(){
+        $post = post_add::whereRaw('expiry_date <=  curdate()')->orderBy('add_type')->get();
+        return view('all_car',compact('post'));
     }
 
 }

@@ -58,7 +58,7 @@
                                     <li style="padding: 0px">vehicle no:{{$lll->vehicle_no}}</li>
                                     <li style="padding: 0px">date_of_first_registration:{{$lll->date_of_first_registration}}</li>
                                 </ul>
-                                <a href="#" class="rent_contact" style="padding: 0px;float: right">Contact</a>
+                                <a href="{{route('contact')}}" class="rent_contact" style="padding: 0px;float: right">Contact</a>
                             </div>
                         </div>
                     </div>

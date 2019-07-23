@@ -1005,7 +1005,7 @@ function render(wizard, options, state)
     wizard.attr("role", "application").empty().append(stepsWrapper).append(contentWrapper)
         .addClass(options.cssClass + " " + options.clearFixCssClass + verticalCssClass);
 
-    // Add WIA-ARIA support
+    // add WIA-ARIA support
     stepContents.each(function (index)
     {
         renderBody(wizard, state, $(this), index);

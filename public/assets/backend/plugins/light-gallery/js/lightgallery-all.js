@@ -510,7 +510,7 @@
             }
         }
 
-        // Add lg-empty-html class if title doesn't exist
+        // add lg-empty-html class if title doesn't exist
         if (typeof subHtml !== 'undefined' && subHtml !== null) {
             if (subHtml === '') {
                 this.$outer.find(this.s.appendSubHtmlTo).addClass('lg-empty-html');
@@ -782,7 +782,7 @@
 
             clearTimeout(_this.hideBartimeout);
 
-            // Add title if this.s.appendSubHtmlTo === lg-sub-html
+            // add title if this.s.appendSubHtmlTo === lg-sub-html
             if (this.s.appendSubHtmlTo === '.lg-sub-html') {
 
                 // wait for slide animation to complete
@@ -2466,7 +2466,7 @@
 
         this.core.$outer.find('.lg-toolbar').append(zoomIcons);
 
-        // Add zoomable class
+        // add zoomable class
         _this.core.$el.on('onSlideItemLoad.lg.tm.zoom', function(event, index, delay) {
 
             // delay will be 0 except first time

@@ -155,7 +155,7 @@
       if (!dontPushVal)
         self.pushVal();
 
-      // Add class when reached maxTags
+      // add class when reached maxTags
       if (self.options.maxTags === self.itemsArray.length || self.items().toString().length === self.options.maxInputLength)
         self.$container.addClass('bootstrap-tagsinput-max');
 

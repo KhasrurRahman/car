@@ -769,7 +769,7 @@ var _defaultParams = require('./default-params');
 var _defaultParams2 = _interopRequireWildcard(_defaultParams);
 
 /*
- * Add modal + overlay to DOM
+ * add modal + overlay to DOM
  */
 
 var _injectedHTML = require('./injected-html');
@@ -831,7 +831,7 @@ var getOverlay = function getOverlay() {
 };
 
 /*
- * Add box-shadow style to button (depending on its chosen bg-color)
+ * add box-shadow style to button (depending on its chosen bg-color)
  */
 var setFocusStyle = function setFocusStyle($button, bgColor) {
   var rgbColor = _hexToRgb.hexToRgb(bgColor);

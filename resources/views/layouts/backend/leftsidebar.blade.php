@@ -63,6 +63,25 @@
                 </li>
 
 
+                <li class="{{Request::is('admin/rent*')?'active': ''}}">
+                    <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+                        <i class="material-icons">face</i>
+                        <span>Rent A Car</span>
+                    </a>
+                    <ul class="ml-menu" style="display: none;">
+                        <li>
+                            <a href="{{route('admin.rent.index')}}" class=" waves-effect waves-block">All Rented Car
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('admin.rent.create')}}" class=" waves-effect waves-block">Post rent a car advertise
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
                 <li class="{{Request::is('admin/pending_add*')?'active': ''}}">
                     <a href="{{route('admin.pending_add')}}">
                         <i class="material-icons">home</i>

@@ -219,7 +219,7 @@ jQuery.fn = jQuery.prototype = {
 		// Build a new jQuery matched element set
 		var ret = jQuery.merge( this.constructor(), elems );
 
-		// Add the old object onto the stack (as a reference)
+		// add the old object onto the stack (as a reference)
 		ret.prevObject = this;
 
 		ret.context = this.context;
@@ -242,7 +242,7 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	ready: function( fn ) {
-		// Add the callback
+		// add the callback
 		jQuery.ready.promise().done( fn );
 
 		return this;
@@ -991,7 +991,7 @@ jQuery.Callbacks = function( options ) {
 		},
 		// Actual Callbacks object
 		self = {
-			// Add a callback or a collection of callbacks to the list
+			// add a callback or a collection of callbacks to the list
 			add: function() {
 				if ( list ) {
 					// First, we save the current length
@@ -1153,7 +1153,7 @@ jQuery.extend({
 		// Keep pipe for back-compat
 		promise.pipe = promise.then;
 
-		// Add list-specific methods
+		// add list-specific methods
 		jQuery.each( tuples, function( i, tuple ) {
 			var list = tuple[ 2 ],
 				stateString = tuple[ 3 ];
@@ -1884,7 +1884,7 @@ jQuery.extend({
 
 		if ( fn ) {
 
-			// Add a progress sentinel to prevent the fx queue from being
+			// add a progress sentinel to prevent the fx queue from being
 			// automatically dequeued
 			if ( type === "fx" ) {
 				queue.unshift( "inprogress" );
@@ -2676,7 +2676,7 @@ jQuery.event = {
 					jQuery.event.dispatch.apply( eventHandle.elem, arguments ) :
 					undefined;
 			};
-			// Add elem as a property of the handle fn to prevent a memory leak with IE non-native events
+			// add elem as a property of the handle fn to prevent a memory leak with IE non-native events
 			eventHandle.elem = elem;
 		}
 
@@ -2736,7 +2736,7 @@ jQuery.event = {
 				}
 			}
 
-			// Add to the element's handler list, delegates in front
+			// add to the element's handler list, delegates in front
 			if ( selector ) {
 				handlers.splice( handlers.delegateCount++, 0, handleObj );
 			} else {
@@ -3034,7 +3034,7 @@ jQuery.event = {
 			}
 		}
 
-		// Add the remaining (directly-bound) handlers
+		// add the remaining (directly-bound) handlers
 		if ( handlers.length > delegateCount ) {
 			handlerQueue.push({ elem: this, matches: handlers.slice( delegateCount ) });
 		}
@@ -3086,7 +3086,7 @@ jQuery.event = {
 		props: "char charCode key keyCode".split(" "),
 		filter: function( event, original ) {
 
-			// Add which for key events
+			// add which for key events
 			if ( event.which == null ) {
 				event.which = original.charCode != null ? original.charCode : original.keyCode;
 			}
@@ -3112,12 +3112,12 @@ jQuery.event = {
 				event.pageY = original.clientY + ( doc && doc.scrollTop  || body && body.scrollTop  || 0 ) - ( doc && doc.clientTop  || body && body.clientTop  || 0 );
 			}
 
-			// Add relatedTarget, if necessary
+			// add relatedTarget, if necessary
 			if ( !event.relatedTarget && fromElement ) {
 				event.relatedTarget = fromElement === event.target ? original.toElement : fromElement;
 			}
 
-			// Add which for click: 1 === left; 2 === middle; 3 === right
+			// add which for click: 1 === left; 2 === middle; 3 === right
 			// Note: button is not normalized, so don't use it
 			if ( !event.which && button !== undefined ) {
 				event.which = ( button & 1 ? 1 : ( button & 2 ? 3 : ( button & 4 ? 2 : 0 ) ) );
@@ -4907,7 +4907,7 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 				}
 			}
 
-		// Add elements to results, through postFinder if defined
+		// add elements to results, through postFinder if defined
 		} else {
 			matcherOut = condense(
 				matcherOut === results ?
@@ -4996,7 +4996,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 				cachedruns = superMatcher.el;
 			}
 
-			// Add elements passing elementMatchers directly to results
+			// add elements passing elementMatchers directly to results
 			for ( ; (elem = elems[i]) != null; i++ ) {
 				if ( byElement && elem ) {
 					for ( j = 0; (matcher = elementMatchers[j]); j++ ) {
@@ -5046,7 +5046,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 					setMatched = condense( setMatched );
 				}
 
-				// Add matches to results
+				// add matches to results
 				push.apply( results, setMatched );
 
 				// Seedless set matches succeeding multiple successful matchers stipulate sorting
@@ -6668,7 +6668,7 @@ jQuery.fn.extend({
 });
 
 jQuery.extend({
-	// Add in style property hooks for overriding the default
+	// add in style property hooks for overriding the default
 	// behavior of getting and setting a style property
 	cssHooks: {
 		opacity: {
@@ -6695,7 +6695,7 @@ jQuery.extend({
 		"zoom": true
 	},
 
-	// Add in properties whose names you wish to fix before
+	// add in properties whose names you wish to fix before
 	// setting or getting the value
 	cssProps: {
 		// normalize float css property
@@ -7849,7 +7849,7 @@ jQuery.extend({
 		};
 
 		// Remove hash character (#7531: and string promotion)
-		// Add protocol if not provided (#5866: IE7 issue with protocol-less urls)
+		// add protocol if not provided (#5866: IE7 issue with protocol-less urls)
 		// We also use the url parameter if available
 		s.url = ( ( url || s.url ) + "" ).replace( rhash, "" ).replace( rprotocol, ajaxLocParts[ 1 ] + "//" );
 
@@ -7906,7 +7906,7 @@ jQuery.extend({
 			// Get ifModifiedKey before adding the anti-cache parameter
 			ifModifiedKey = s.url;
 
-			// Add anti-cache in url if needed
+			// add anti-cache in url if needed
 			if ( s.cache === false ) {
 
 				var ts = jQuery.now(),
@@ -8535,7 +8535,7 @@ if ( jQuery.support.ajax ) {
 								xhrCallbacks = {};
 								jQuery( window ).unload( xhrOnUnloadAbort );
 							}
-							// Add to list of active xhrs callbacks
+							// add to list of active xhrs callbacks
 							xhrCallbacks[ handle ] = callback;
 						}
 						xhr.onreadystatechange = callback;
@@ -9352,7 +9352,7 @@ jQuery.fn.extend({
 		offset.top  -= parseFloat( jQuery.css(elem, "marginTop") ) || 0;
 		offset.left -= parseFloat( jQuery.css(elem, "marginLeft") ) || 0;
 
-		// Add offsetParent borders
+		// add offsetParent borders
 		parentOffset.top  += parseFloat( jQuery.css(offsetParent[0], "borderTopWidth") ) || 0;
 		parentOffset.left += parseFloat( jQuery.css(offsetParent[0], "borderLeftWidth") ) || 0;
 

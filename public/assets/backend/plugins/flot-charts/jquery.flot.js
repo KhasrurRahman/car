@@ -3139,7 +3139,7 @@ Licensed under the MIT license.
         }
     }
 
-    // Add the plot function to the top level of the jQuery object
+    // add the plot function to the top level of the jQuery object
 
     $.plot = function(placeholder, data, options) {
         //var t0 = new Date();

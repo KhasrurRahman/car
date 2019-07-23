@@ -171,7 +171,7 @@ class DillerController extends Controller
 
 
             $payment = $post->add_type;
-            Toastr::success('Add successfully save,Waiting for The Admin approval.now you have to payment for publishing the                add','Success');
+            Toastr::success('add successfully save,Waiting for The Admin approval.now you have to payment for publishing the                add','Success');
             return view('diller.payment',compact('payment'));
 
     }
@@ -185,7 +185,7 @@ class DillerController extends Controller
     public function show($id)
     {
         $post = post_add::find($id);
-        return view('Diller.show',compact('post'));
+        return view('diller.show',compact('post'));
     }
 
     /**

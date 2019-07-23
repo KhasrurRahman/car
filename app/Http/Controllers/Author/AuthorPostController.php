@@ -176,11 +176,11 @@ class AuthorPostController extends Controller
         $post->save();
 
 if ($post_count->count()==0){
-    Toastr::success('Add successfully save for 90days,Waiting for The Admin approval','Success');
+    Toastr::success('add successfully save for 90days,Waiting for The Admin approval','Success');
     return redirect()->back();
 }else{
     $payment = $post->add_type;
-    Toastr::success('Add successfully save,Waiting for The Admin approval.now you have to payment for publishing the add','Success');
+    Toastr::success('add successfully save,Waiting for The Admin approval.now you have to payment for publishing the add','Success');
     return view('author.payment',compact('payment'));
 }
 

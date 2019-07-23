@@ -31,11 +31,11 @@
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div class="top_car_image text-center">
                                         <ul class="nav nav-tabs" style="margin-left: 60px">
-                                            <li><a data-toggle="tab" href="#car" class="active"><img src="{{asset('public/assets/fontend/img/car.png')}}" title="car" alt=""></a></li>
-                                            <li><a data-toggle="tab" href="#bike"><img src="{{asset('public/assets/fontend/img/bike.png')}}" title="car" alt=""></a></li>
-                                            <li><a data-toggle="tab" href="#truck"><img src="{{asset('public/assets/fontend/img/truck.png')}}" title="car" alt=""></a></li>
-                                            <li><a data-toggle="tab" href="#cycle"><img src="{{asset('public/assets/fontend/img/cycle.png')}}" title="car" alt=""></a></li>
-                                            <li class="border1"><a data-toggle="tab" href="#motor"><img src="{{asset('public/assets/fontend/img/motor.png')}}" title="car" alt=""></a></li>
+                                            <li class="active"><a data-toggle="tab" href="#car" class="active"><img src="{{asset('public/assets/fontend/img/car.png')}}" title="car" alt=""></a></li>
+                                            <li><a data-toggle="tab" href="#bike"><img src="{{asset('public/assets/fontend/img/bike.png')}}" title="bike" alt=""></a></li>
+                                            <li><a data-toggle="tab" href="#truck"><img src="{{asset('public/assets/fontend/img/truck.png')}}" title="truck" alt=""></a></li>
+                                            <li><a data-toggle="tab" href="#cycle"><img src="{{asset('public/assets/fontend/img/cycle.png')}}" title="cycle" alt=""></a></li>
+                                            <li class="border1"><a data-toggle="tab" href="#motor"><img src="{{asset('public/assets/fontend/img/motor.png')}}" title="motor" alt=""></a></li>
                                         </ul>
                                     </div>
 
@@ -396,7 +396,19 @@
                                         </div>
                                     </div>
                                     <div class="search_btn">
-                                        <a href="vechil_sell_filter.html">Continue</a>
+                                        <a href="
+                    @if (!\Illuminate\Support\Facades\Auth::check())
+                                    {{route('login')}}
+                                   @else
+                                            @if (\Illuminate\Support\Facades\Auth::user()->role_id == 2)
+                                            {{route('author.post_form_fontend')}}
+
+                                            @elseif(\Illuminate\Support\Facades\Auth::user()->role_id == 3)
+
+                                        {{route('diller.post_form_fontend')}}
+                                            @endif
+                                 @endif
+                                        ">Continue</a>
                                     </div>
                                 </div>
                             </div>

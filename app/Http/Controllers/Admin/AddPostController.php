@@ -22,7 +22,7 @@ class AddPostController extends Controller
     public function index()
     {
         $posts = post_add::all();
-        return view('Admin.Add.all_add',compact('posts'));
+        return view('admin.add.all_add',compact('posts'));
     }
 
     /**
@@ -32,7 +32,7 @@ class AddPostController extends Controller
      */
     public function create()
     {
-        return view('Admin.Add.post_a_add');
+        return view('admin.add.post_a_add');
     }
 
     /**
@@ -156,7 +156,7 @@ class AddPostController extends Controller
         $post->image_5 = $imagename_5;
         $post->save();
 
-        Toastr::success('Add successfully save','Success');
+        Toastr::success('add successfully save','Success');
         return redirect()->back();
     }
 
@@ -169,7 +169,7 @@ class AddPostController extends Controller
     public function show($id)
     {
         $post = post_add::find($id);
-        return view('Admin.Add.show',compact('post'));
+        return view('admin.add.show',compact('post'));
     }
 
     /**

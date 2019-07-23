@@ -814,7 +814,7 @@ function closure ( target, options, originalOptions ){
 	// Delimit proposed values for handle positions.
 	function getPositions ( a, b, delimit ) {
 
-		// Add movement to current position.
+		// add movement to current position.
 		var c = a + b[0], d = a + b[1];
 
 		// Only alter the other position on drag,
@@ -895,7 +895,7 @@ function closure ( target, options, originalOptions ){
 		return origin;
 	}
 
-	// Add the proper connection classes.
+	// add the proper connection classes.
 	function addConnection ( connect, target, handles ) {
 
 		// Apply the required connection classes to the elements
@@ -915,7 +915,7 @@ function closure ( target, options, originalOptions ){
 		}
 	}
 
-	// Add handles to the slider base.
+	// add handles to the slider base.
 	function addHandles ( nrHandles, direction, base ) {
 
 		var index, handles = [];
@@ -1197,7 +1197,7 @@ function closure ( target, options, originalOptions ){
 			// Apply the filter function, if it is set.
 			values[1] = (values[1] && filterFunc) ? filterFunc(values[0], values[1]) : values[1];
 
-			// Add a marker for every point
+			// add a marker for every point
 			out += '<div ' + getTags(offset, options.cssClasses.marker, values) + '></div>';
 
 			// Values are only appended for points marked '1' or '2'.
@@ -1507,7 +1507,7 @@ function closure ( target, options, originalOptions ){
 		// The tap event shouldn't propagate up and cause 'edge' to run.
 		event.stopPropagation();
 
-		// Add up the handle offsets.
+		// add up the handle offsets.
 		scope_Handles.forEach(function(a){
 			total += offset(a)[ options.style ];
 		});
@@ -1897,7 +1897,7 @@ function closure ( target, options, originalOptions ){
 	}
 
 	// Create the base element, initialise HTML and set classes.
-	// Add handles and links.
+	// add handles and links.
 	scope_Base = addSlider( options.dir, options.ort, scope_Target );
 	scope_Handles = addHandles( options.handles, options.dir, scope_Base );
 

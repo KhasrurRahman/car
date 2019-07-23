@@ -43,7 +43,7 @@
 
         this.core.$outer.find('.lg-toolbar').append(zoomIcons);
 
-        // Add zoomable class
+        // add zoomable class
         _this.core.$el.on('onSlideItemLoad.lg.tm.zoom', function(event, index, delay) {
 
             // delay will be 0 except first time

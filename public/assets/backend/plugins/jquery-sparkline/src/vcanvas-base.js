@@ -103,7 +103,7 @@
         },
 
         /**
-         * Add a shape to the end of the render queue
+         * add a shape to the end of the render queue
          */
         appendShape: function (shape) {
             alert('appendShape not implemented');

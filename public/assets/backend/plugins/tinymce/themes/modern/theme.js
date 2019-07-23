@@ -733,7 +733,7 @@ tinymce.ThemeManager.add('modern', function(editor) {
 				]
 			});
 
-			// Add statusbar
+			// add statusbar
 			/*if (settings.statusbar !== false) {
 				panel.add({type: 'panel', classes: 'statusbar', layout: 'flow', border: '1 0 0 0', items: [
 					{type: 'elementpath'}
@@ -845,7 +845,7 @@ tinymce.ThemeManager.add('modern', function(editor) {
 			};
 		}
 
-		// Add statusbar if needed
+		// add statusbar if needed
 		if (settings.statusbar !== false) {
 			panel.add({type: 'panel', name: 'statusbar', classes: 'statusbar', layout: 'flow', border: '1 0 0 0', ariaRoot: true, items: [
 				{type: 'elementpath', editor: editor},
@@ -871,7 +871,7 @@ tinymce.ThemeManager.add('modern', function(editor) {
 			panel = null;
 		});
 
-		// Add accesibility shortcuts
+		// add accesibility shortcuts
 		addAccessibilityKeys(panel);
 		addContextualToolbars();
 

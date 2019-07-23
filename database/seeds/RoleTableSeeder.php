@@ -21,7 +21,7 @@ class RoleTableSeeder extends Seeder
         ]);
 
         DB::table('roles')->insert([
-            'name'=>'Diller',
+            'name'=>'diller',
         ]);
     }
 }

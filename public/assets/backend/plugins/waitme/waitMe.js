@@ -1,6 +1,6 @@
 /*
 waitMe - 1.15 [15.02.16]
-Author: vadimsva
+author: vadimsva
 Github: https://github.com/vadimsva/waitMe
 */
 (function($) {

@@ -110,7 +110,7 @@ if (!document.createElement('canvas').getContext) {
     }
   }
 
-  // Add namespaces and stylesheet at startup.
+  // add namespaces and stylesheet at startup.
   addNamespacesAndStylesheet(document);
 
   var G_vmlCanvasManager_ = {
@@ -142,7 +142,7 @@ if (!document.createElement('canvas').getContext) {
       if (!el.getContext) {
         el.getContext = getContext;
 
-        // Add namespaces and stylesheet to document of the element.
+        // add namespaces and stylesheet to document of the element.
         addNamespacesAndStylesheet(el.ownerDocument);
 
         // Remove fallback content. There is no way to hide text nodes so we

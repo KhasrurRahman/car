@@ -76,7 +76,7 @@ angular.module('bootstrap-tagsinput', [])
           // Refresh remaining tags
           select.tagsinput('refresh');
 
-          // Add new items in model as tags
+          // add new items in model as tags
           for (i = 0; i < added.length; i++) {
             select.tagsinput('add', added[i]);
           }

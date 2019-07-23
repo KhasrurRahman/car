@@ -428,7 +428,7 @@ var GMaps = (function(global) {
     };
 
     /**
-     * Add a context menu for a map or a marker.
+     * add a context menu for a map or a marker.
      *
      * @param {object} options - The `options` object should contain:
      * * `control` (string): Kind of control the context menu will be attached. Can be "map" or "marker".
@@ -694,7 +694,7 @@ GMaps.prototype.createControl = function(options) {
 };
 
 /**
- * Add a custom control to the map UI.
+ * add a custom control to the map UI.
  *
  * @param {object} options - The `options` object should contain:
  * * `style` (object): The keys and values of this object should be valid CSS properties and values.

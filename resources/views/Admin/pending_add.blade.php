@@ -1,5 +1,5 @@
 @extends('layouts.backend.app')
-@section('title'.'pending Add')
+@section('title'.'add')
 @endsection
 @push('css')
 @endpush

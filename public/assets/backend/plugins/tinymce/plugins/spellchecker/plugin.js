@@ -295,7 +295,7 @@ define("tinymce/spellcheckerplugin/DomTextMatcher", [], function() {
 
 					parentNode = node.parentNode;
 					if (range.startNodeIndex > 0) {
-						// Add "before" text node (before the match)
+						// add "before" text node (before the match)
 						before = doc.createTextNode(node.data.substring(0, range.startNodeIndex));
 						parentNode.insertBefore(before, node);
 					}
@@ -304,7 +304,7 @@ define("tinymce/spellcheckerplugin/DomTextMatcher", [], function() {
 					var el = makeReplacementNode(range.match, matchIndex);
 					parentNode.insertBefore(el, node);
 					if (range.endNodeIndex < node.length) {
-						// Add "after" text node (after the match)
+						// add "after" text node (after the match)
 						after = doc.createTextNode(node.data.substring(range.endNodeIndex));
 						parentNode.insertBefore(after, node);
 					}
@@ -679,7 +679,7 @@ define("tinymce/spellcheckerplugin/Plugin", [
 			items.push({text: '-'});
 
 			if (hasDictionarySupport) {
-				items.push({text: 'Add to Dictionary', onclick: function() {
+				items.push({text: 'add to Dictionary', onclick: function() {
 					addToDictionary(word, spans);
 				}});
 			}

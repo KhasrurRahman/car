@@ -18,7 +18,7 @@ tinymce.PluginManager.add('directionality', function(editor) {
 			curDir = dom.getAttrib(blocks[0], "dir");
 
 			tinymce.each(blocks, function(block) {
-				// Add dir to block if the parent block doesn't already have that dir
+				// add dir to block if the parent block doesn't already have that dir
 				if (!dom.getParent(block.parentNode, "*[dir='" + dir + "']", dom.getRoot())) {
 					if (curDir != dir) {
 						dom.setAttrib(block, "dir", dir);

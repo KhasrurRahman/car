@@ -349,7 +349,7 @@ define("tinymce/tableplugin/TableGrid", [
 						curNode = node;
 					});
 
-					// Add something to the inner node
+					// add something to the inner node
 					if (curNode) {
 						curNode.innerHTML = Env.ie && Env.ie < 10 ? '&nbsp;' : '<br data-mce-bogus="1" />';
 					}
@@ -890,7 +890,7 @@ define("tinymce/tableplugin/TableGrid", [
 					dom.remove(row.cells[i]);
 				}
 
-				// Add before/after
+				// add before/after
 				if (before) {
 					targetRow.parentNode.insertBefore(row, targetRow);
 				} else {
@@ -1032,7 +1032,7 @@ define("tinymce/tableplugin/TableGrid", [
 
 				removeCellSelection();
 
-				// Add new selection
+				// add new selection
 				for (y = startY; y <= maxY; y++) {
 					for (x = startX; x <= maxX; x++) {
 						if (grid[y][x]) {
@@ -1617,7 +1617,7 @@ define("tinymce/tableplugin/CellSelection", [
 			}
 		}, true);
 
-		// Add cell selection logic
+		// add cell selection logic
 		editor.on('MouseDown', function(e) {
 			if (e.button != 2 && !resizing) {
 				clear();

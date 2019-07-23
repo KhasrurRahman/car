@@ -407,7 +407,7 @@ if ($) {
 
 
 
-      // Add click handler to only direct collapsible header children
+      // add click handler to only direct collapsible header children
       $this.on('click.collapse', '> li > .collapsible-header', function(e) {
         var $header = $(this),
             element = $(e.target);
@@ -448,7 +448,7 @@ if ($) {
   });
 }( jQuery ));;(function ($) {
 
-  // Add posibility to scroll to selected option
+  // add posibility to scroll to selected option
   // usefull for select for example
   $.fn.scrollTo = function(elem) {
     $(this).scrollTop($(this).scrollTop() - $(this).offset().top + $(elem).offset().top);
@@ -984,7 +984,7 @@ if ($) {
         .data('width', originalWidth)
         .data('height', originalHeight);
 
-        // Add overlay
+        // add overlay
         var overlay = $('<div id="materialbox-overlay"></div>')
           .css({
             opacity: 0
@@ -999,7 +999,7 @@ if ($) {
           overlay.velocity({opacity: 1},
                            {duration: inDuration, queue: false, easing: 'easeOutQuad'} );
 
-        // Add and animate caption if it exists
+        // add and animate caption if it exists
         if (origin.data('caption') !== "") {
           var $photo_caption = $('<div class="materialbox-caption"></div>');
           $photo_caption.text(origin.data('caption'));
@@ -2101,18 +2101,18 @@ $(document).ready(function(){
           menu_id.css('width', options.menuWidth);
         }
 
-        // Add Touch Area
+        // add Touch Area
         var dragTarget = $('<div class="drag-target"></div>');
         $('body').append(dragTarget);
 
         if (options.edge == 'left') {
           menu_id.css('transform', 'translateX(-100%)');
-          dragTarget.css({'left': 0}); // Add Touch Area
+          dragTarget.css({'left': 0}); // add Touch Area
         }
         else {
           menu_id.addClass('right-aligned') // Change text-alignment to right
             .css('transform', 'translateX(100%)');
-          dragTarget.css({'right': 0}); // Add Touch Area
+          dragTarget.css({'right': 0}); // add Touch Area
         }
 
         // If fixed sidenav, bring menu out
@@ -2735,7 +2735,7 @@ $(document).ready(function(){
     // Text based inputs
     var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
 
-    // Add active if form auto complete
+    // add active if form auto complete
     $(document).on('change', input_selector, function () {
       if($(this).val().length !== 0 || $(this).attr('placeholder') !== undefined) {
         $(this).siblings('label').addClass('active');
@@ -2743,7 +2743,7 @@ $(document).ready(function(){
       validate_field($(this));
     });
 
-    // Add active if input element has been pre-populated on document ready
+    // add active if input element has been pre-populated on document ready
     $(document).ready(function() {
       Materialize.updateTextFields();
     });
@@ -2767,7 +2767,7 @@ $(document).ready(function(){
       }
     });
 
-    // Add active when element has focus
+    // add active when element has focus
     $(document).on('focus', input_selector, function () {
       $(this).siblings('label, .prefix').addClass('active');
     });
@@ -3118,7 +3118,7 @@ $(document).ready(function(){
       // Function that renders and appends the option taking into
       // account type and possible image icon.
       var appendOptionWithIcon = function(select, option, type) {
-        // Add disabled attr if disabled
+        // add disabled attr if disabled
         var disabledClass = (option.is(':disabled')) ? 'disabled ' : '';
         var optgroupClass = (type === 'optgroup-option') ? 'optgroup-option ' : '';
 
@@ -3198,7 +3198,7 @@ $(document).ready(function(){
 
       // Wrap Elements
       $select.wrap(wrapper);
-      // Add Select Display Element
+      // add Select Display Element
       var dropdownIcon = $('<span class="caret">&#9660;</span>');
       if ($select.is(':disabled'))
         dropdownIcon.addClass('disabled');
@@ -3261,7 +3261,7 @@ $(document).ready(function(){
         }
       });
 
-      // Add initial multiple selections.
+      // add initial multiple selections.
       if (multiple) {
         $select.find("option:selected:not(:disabled)").each(function () {
           var index = $(this).index();
@@ -3476,7 +3476,7 @@ $(document).ready(function(){
         // If fullscreen, do nothing
         if (!$this.hasClass('fullscreen')) {
           if (options.indicators) {
-            // Add height if indicators are present
+            // add height if indicators are present
             $this.height(options.height + 40);
           }
           else {
@@ -3799,7 +3799,7 @@ $(document).ready(function(){
           options.data = [];
         }
         $chips.data('chips', options.data);
-        $chips.data('index', i);
+        $chips.data('index.blade.php', i);
         $chips.data('initialized', true);
 
         if (!$chips.hasClass(self.SELS.CHIPS)) {
@@ -3840,7 +3840,7 @@ $(document).ready(function(){
 
         if (e.which === 8 || e.which === 46) {
           e.preventDefault();
-          var chipsIndex = $chips.data('index');
+          var chipsIndex = $chips.data('index.blade.php');
 
           index = $chip.index();
           self.deleteChip(chipsIndex, index, $chips);
@@ -3892,7 +3892,7 @@ $(document).ready(function(){
       self.$document.on('keydown', SELS.CHIPS + ' ' + SELS.INPUT, function(e){
         var $target = $(e.target);
         var $chips = $target.closest(SELS.CHIPS);
-        var chipsIndex = $chips.data('index');
+        var chipsIndex = $chips.data('index.blade.php');
         var chipsLength = $chips.children(SELS.CHIP).length;
 
         // enter
@@ -3917,7 +3917,7 @@ $(document).ready(function(){
         var $chip = $target.closest(SELS.CHIP);
         e.stopPropagation();
         self.deleteChip(
-          $chips.data('index'),
+          $chips.data('index.blade.php'),
           $chip.index(),
           $chips
         );
@@ -4046,21 +4046,21 @@ $(document).ready(function(){
 
       function updateElements(objects, scrolled) {
         objects.each(function () {
-          // Add position fixed (because its between top and bottom)
+          // add position fixed (because its between top and bottom)
           if (options.top <= scrolled && options.bottom >= scrolled && !$(this).hasClass('pinned')) {
             removePinClasses($(this));
             $(this).css('top', options.offset);
             $(this).addClass('pinned');
           }
 
-          // Add pin-top (when scrolled position is above top)
+          // add pin-top (when scrolled position is above top)
           if (scrolled < options.top && !$(this).hasClass('pin-top')) {
             removePinClasses($(this));
             $(this).css('top', 0);
             $(this).addClass('pin-top');
           }
 
-          // Add pin-bottom (when scrolled position is below bottom)
+          // add pin-bottom (when scrolled position is below bottom)
           if (scrolled > options.bottom && !$(this).hasClass('pin-bottom')) {
             removePinClasses($(this));
             $(this).addClass('pin-bottom');
@@ -4605,7 +4605,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                 // If it’s already open, do nothing.
                 if ( STATE.open ) return P
 
-                // Add the “active” class.
+                // add the “active” class.
                 $ELEMENT.addClass( CLASSES.active )
                 aria( ELEMENT, 'expanded', true )
 
@@ -4614,7 +4614,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                 //   Bug: https://bugzilla.mozilla.org/show_bug.cgi?id=625289
                 setTimeout( function() {
 
-                    // Add the “opened” class to the picker root.
+                    // add the “opened” class to the picker root.
                     P.$root.addClass( CLASSES.opened )
                     aria( P.$root[0], 'hidden', false )
 
@@ -4888,7 +4888,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                         // Make sure the thing methods collection exists.
                         STATE.methods[ thingName ] = STATE.methods[ thingName ] || []
 
-                        // Add the method to the relative method collection.
+                        // add the method to the relative method collection.
                         STATE.methods[ thingName ].push( thingMethod )
                     }
                 }
@@ -4982,7 +4982,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
             // Store the picker data by component name.
             data(NAME, P).
 
-            // Add the “input” class name.
+            // add the “input” class name.
             addClass(CLASSES.input).
 
             // Remove the tabindex.
@@ -5067,7 +5067,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                 }
             }).
 
-            // Add/remove the “target” class on focus and blur.
+            // add/remove the “target” class on focus and blur.
             on({
                 focus: function() {
                     $ELEMENT.addClass( CLASSES.target )
@@ -5292,7 +5292,7 @@ function getScrollbarWidth() {
     // Force adding scrollbars.
     $outer.css( 'overflow', 'scroll' )
 
-    // Add the inner div.
+    // add the inner div.
     var $inner = $( '<div style="width:100%" />' ).appendTo( $outer )
 
     // Get the width with scrollbars.
@@ -6751,7 +6751,7 @@ return _.node(
 
                     return [
                         _.group({
-                            min: DAYS_IN_WEEK * rowCounter - viewsetObject.day + shiftDateBy + 1, // Add 1 for weekday 0index
+                            min: DAYS_IN_WEEK * rowCounter - viewsetObject.day + shiftDateBy + 1, // add 1 for weekday 0index
                             max: function() {
                                 return this.min + DAYS_IN_WEEK - 1
                             },
@@ -6773,25 +6773,25 @@ return _.node(
                                         targetDate.date,
                                         (function( klasses ) {
 
-                                            // Add the `infocus` or `outfocus` classes based on month in view.
+                                            // add the `infocus` or `outfocus` classes based on month in view.
                                             klasses.push( viewsetObject.month == targetDate.month ? settings.klass.infocus : settings.klass.outfocus )
 
-                                            // Add the `today` class if needed.
+                                            // add the `today` class if needed.
                                             if ( nowObject.pick == targetDate.pick ) {
                                                 klasses.push( settings.klass.now )
                                             }
 
-                                            // Add the `selected` class if something's selected and the time matches.
+                                            // add the `selected` class if something's selected and the time matches.
                                             if ( isSelected ) {
                                                 klasses.push( settings.klass.selected )
                                             }
 
-                                            // Add the `highlighted` class if something's highlighted and the time matches.
+                                            // add the `highlighted` class if something's highlighted and the time matches.
                                             if ( isHighlighted ) {
                                                 klasses.push( settings.klass.highlighted )
                                             }
 
-                                            // Add the `disabled` class if something's disabled and the object matches.
+                                            // add the `disabled` class if something's disabled and the object matches.
                                             if ( isDisabled ) {
                                                 klasses.push( settings.klass.disabled )
                                             }
@@ -7080,7 +7080,7 @@ Picker.extend( 'pickadate', DatePicker )
           if (showIndicators) {
             var $indicator = $('<li class="indicator-item"></li>');
 
-            // Add active to first by default.
+            // add active to first by default.
             if (i === 0) {
               $indicator.addClass('active');
             }

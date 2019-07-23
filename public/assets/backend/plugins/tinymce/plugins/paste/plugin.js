@@ -176,7 +176,7 @@ define("tinymce/pasteplugin/Utils", [
 				}
 			}
 
-			// Add \n or \n\n for blocks or P
+			// add \n or \n\n for blocks or P
 			if (blockElements[name] && currentNode.next) {
 				text += '\n';
 
@@ -1428,7 +1428,7 @@ define("tinymce/pasteplugin/WordFilter", [
 					valid_children: '-li[p]'
 				});
 
-				// Add style/class attribute to all element rules since the user might have removed them from
+				// add style/class attribute to all element rules since the user might have removed them from
 				// paste_word_valid_elements config option and we need to check them for properties
 				Tools.each(schema.elements, function(rule) {
 					/*eslint dot-notation:0*/

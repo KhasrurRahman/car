@@ -15,13 +15,13 @@ class expiredAddController extends Controller
         return view('admin.expiry_add.show_expired_add',compact('post','user'));
     }
 
-    public function notify($id){
-        $post = post_add::find($id);
-        $user = User::find($post->user_id);
-
-        if ($user->role_id == 2){
-            if ($post->)
-        }
-    }
+//    public function notify($id){
+//        $post = post_add::find($id);
+//        $user = User::find($post->user_id);
+//
+//        if ($user->role_id == 2){
+//            if ($post->)
+//        }
+//    }
 
 }

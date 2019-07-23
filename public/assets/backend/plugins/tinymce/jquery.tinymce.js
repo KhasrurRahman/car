@@ -123,14 +123,14 @@
 								tinymce.ScriptLoader.markDone(tinymce.baseURI.toAbsolute(url));
 							}
 
-							// Add core languages
+							// add core languages
 							load("langs/" + lang + ".js");
 
-							// Add themes with languages
+							// add themes with languages
 							load("themes/" + settings.theme + "/theme" + suffix + ".js");
 							load("themes/" + settings.theme + "/langs/" + lang + ".js");
 
-							// Add plugins with languages
+							// add plugins with languages
 							$.each(settings.plugins.split(","), function(i, name) {
 								if (name) {
 									load("plugins/" + name + "/plugin" + suffix + ".js");
@@ -180,7 +180,7 @@
 		return self;
 	};
 
-	// Add :tinymce pseudo selector this will select elements that has been converted into editor instances
+	// add :tinymce pseudo selector this will select elements that has been converted into editor instances
 	// it's now possible to use things like $('*:tinymce') to get all TinyMCE bound elements.
 	$.extend($.expr[":"], {
 		tinymce: function(e) {

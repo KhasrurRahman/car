@@ -763,7 +763,7 @@ tinymce.PluginManager.add('media', function(editor, url) {
 				realElmName = node.attr(name);
 				realElm = new tinymce.html.Node(realElmName, 1);
 
-				// Add width/height to everything but audio
+				// add width/height to everything but audio
 				if (realElmName != "audio" && realElmName != "script") {
 					className = node.attr('class');
 					if (className && className.indexOf('mce-preview-object') !== -1) {

@@ -22,10 +22,15 @@ Auth::routes(['verify' => true]);
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('contact', 'HomeController@contact')->name('contact');
 Route::get('single_add_view/{id}', 'HomeController@single_add_view')->name('single_add_view');
 Route::get('dealerRegistration', 'HomeController@dealerRegistration')->name('dealerRegistration');
 Route::get('dillerLogin', 'HomeController@dillerLogin')->name('dillerLogin');
 Route::get('search', 'HomeController@search')->name('search');
+Route::get('rent', 'HomeController@rent')->name('rent');
+Route::get('rent_show/{id}', 'HomeController@rent_show')->name('rent_show');
+Route::get('servise', 'HomeController@servise')->name('servise');
+Route::get('all_car', 'HomeController@all_car')->name('all_car');
 
 //all dealers
 Route::get('diller', 'HomeController@diller')->name('diller');
@@ -52,6 +57,10 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin','middleware'
     Route::get('expiry_post','AddPostController@expiry_post')->name('expiry_post');
     Route::get('view_expiry_post/{id}','expiredAddController@show')->name('view_expiry_post');
     Route::put('/notify/{id}','expiredAddController@notify')->name('notify');
+
+    //rent a car
+    Route::resource('rent','RentACarController');
+
 });
 
 
@@ -62,13 +71,18 @@ Route::group(['as'=>'author.','prefix'=>'author','namespace'=>'Author','middlewa
     Route::get('All_post','AuthorPostController@All_post')->name('All_post');
     Route::get('expiry_post','AuthorPostController@expiry_post')->name('expiry_post');
     Route::get('setting','DashbordController@setting')->name('setting');
+
+
+    Route::get('post_form_fontend','DashbordController@post_form_fontend')->name('post_form_fontend');
 });
 
 //dealer route
-Route::group(['as'=>'diller.','prefix'=>'diller','namespace'=>'Diller','middleware'=>['auth','diller','verified']],function(){
+Route::group(['as'=>'diller.','prefix'=>'diller','namespace'=>'diller','middleware'=>['auth','diller','verified']],function(){
     Route::get('dashbord','DashbordController@index')->name('dashbord');
     Route::resource('diller','DillerController');
     Route::get('All_post','DillerController@All_post')->name('All_post');
     Route::get('expiry_post','DillerController@expiry_post')->name('expiry_post');
     Route::get('setting','DashbordController@setting')->name('setting');
+
+    Route::get('post_form_fontend','DashbordController@post_form_fontend')->name('post_form_fontend');
 });

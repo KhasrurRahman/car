@@ -8030,7 +8030,7 @@ module.exports = function(Chart) {
 			}
 		});
 
-		//Add the chart instance to the global namespace
+		//add the chart instance to the global namespace
 		Chart.instances[this.id] = this;
 
 		if (this.options.responsive) {
@@ -8805,7 +8805,7 @@ module.exports = function(Chart) {
 				// Remove excess bars for data points that have been removed
 				md.splice(numData, numMetaData - numData);
 			} else if (numData > numMetaData) {
-				// Add new elements
+				// add new elements
 				for (var index = numMetaData; index < numData; ++index) {
 					this.addElementAndReset(index);
 				}
@@ -9017,7 +9017,7 @@ module.exports = function(Chart) {
 		helpers.each(Array.prototype.slice.call(arguments, 1), function(extension) {
 			helpers.each(extension, function(value, key) {
 				if (key === 'scales') {
-					// Scale config merging is complex. Add out own function here for that
+					// Scale config merging is complex. add out own function here for that
 					base[key] = helpers.scaleMerge(base.hasOwnProperty(key) ? base[key] : {}, value);
 
 				} else if (key === 'scale') {
@@ -12328,7 +12328,7 @@ module.exports = function(Chart) {
 			ctx.font = helpers.fontString(footerFontSize, vm._footerFontStyle, vm._footerFontFamily);
 			helpers.each(vm.footer, maxLineWidth);
 
-			// Add padding
+			// add padding
 			size.width += 2 * vm.xPadding;
 
 			return size;
@@ -13941,7 +13941,7 @@ module.exports = function(Chart) {
 				pointPosition = this.getPointPosition(i, largestPossibleRadius);
 				textWidth = this.ctx.measureText(this.pointLabels[i] ? this.pointLabels[i] : '').width + 5;
 
-				// Add quarter circle to make degree 0 mean top of circle
+				// add quarter circle to make degree 0 mean top of circle
 				var angleRadians = this.getIndexAngle(i) + (Math.PI / 2);
 				var angle = (angleRadians * 360 / (2 * Math.PI)) % 360;
 
@@ -14154,7 +14154,7 @@ module.exports = function(Chart) {
 
 						var pointLabels = me.pointLabels;
 
-						// Add quarter circle to make degree 0 mean top of circle
+						// add quarter circle to make degree 0 mean top of circle
 						var angleRadians = this.getIndexAngle(i) + (Math.PI / 2);
 						var angle = (angleRadians * 360 / (2 * Math.PI)) % 360;
 

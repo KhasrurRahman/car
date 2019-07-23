@@ -5501,7 +5501,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// ┌────────────────────────────────────────────────────────────┐ \\
 	// │ Eve 0.4.2 - JavaScript Events Library                      │ \\
 	// ├────────────────────────────────────────────────────────────┤ \\
-	// │ Author Dmitry Baranovskiy (http://dmitry.baranovskiy.com/) │ \\
+	// │ author Dmitry Baranovskiy (http://dmitry.baranovskiy.com/) │ \\
 	// └────────────────────────────────────────────────────────────┘ \\
 
 	(function (glob) {

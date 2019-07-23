@@ -35,7 +35,7 @@ $.extend( $.fn, {
 			return validator;
 		}
 
-		// Add novalidate tag if HTML5.
+		// add novalidate tag if HTML5.
 		this.attr( "novalidate", "novalidate" );
 
 		validator = new $.validator( options, this[ 0 ] );
@@ -427,7 +427,7 @@ $.extend( $.validator, {
 				$( this.currentForm ).on( "invalid-form.validate", this.settings.invalidHandler );
 			}
 
-			// Add aria-required to any Static/Data/Class required fields before first validation
+			// add aria-required to any Static/Data/Class required fields before first validation
 			// Screen readers require this attribute to be present before the initial submission http://www.w3.org/TR/WCAG-TECHS/ARIA2.html
 			$( this.currentForm ).find( "[required], [data-rule-required], .required" ).attr( "aria-required", "true" );
 		},
@@ -496,7 +496,7 @@ $.extend( $.validator, {
 				}
 				this.showErrors();
 
-				// Add aria-invalid status for screen readers
+				// add aria-invalid status for screen readers
 				$( element ).attr( "aria-invalid", !rs );
 			}
 
@@ -508,7 +508,7 @@ $.extend( $.validator, {
 			if ( errors ) {
 				var validator = this;
 
-				// Add items to error list and map
+				// add items to error list and map
 				$.extend( this.errorMap, errors );
 				this.errorList = $.map( this.errorMap, function( message, name ) {
 					return {
@@ -962,7 +962,7 @@ $.extend( $.validator, {
 						describedBy = errorID;
 					} else if ( !describedBy.match( new RegExp( "\\b" + this.escapeCssMeta( errorID ) + "\\b" ) ) ) {
 
-						// Add to end of list if not already present
+						// add to end of list if not already present
 						describedBy += " " + errorID;
 					}
 					$( element ).attr( "aria-describedby", describedBy );
